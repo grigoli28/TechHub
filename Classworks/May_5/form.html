@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <form action="/register" method="GET">
+        <!-- readonly -->
+        Firstname: <input type="text" name="firstname" placeholder="firstname" maxlength="10"> <br>
+        <!-- disabled -->
+        Lastname: <input type="text" name="lastname" placeholder="lastname"> <br>
+    </form>
+
+    <hr>
+    <form action="" method="POST">
+        <!-- readonly -->
+        <label for="username">UserName:</label> 
+        <input type="text" name="UserName" placeholder="UserName" id="username" required> <br>
+        <!-- disabled -->
+        <label for="password">Password:</label> 
+        <input type="password" name="Password" placeholder="Password" id="password"> <br>
+        <br>
+
+        <input type="submit" value="Login">
+        <input type="reset" value="reset fields">
+        <br>
+
+        <br>
+        <label for="comment">Comment:</label>
+        <textarea name="comment" rows="5" cols="100" style="resize: none;" id="comment"></textarea>
+        <br>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="other">Other
+        <br>
+        <fieldset>
+            <legend>Vehicles</legend>
+            <input type="checkbox" name="bike" value="bike">I have a bike
+            <input type="checkbox" name="car" value="car">I have a car
+        </fieldset>
+        <br>
+        <label id="cars">Select car</label>
+        <!-- size="3", cars[] multiple-->
+        <select name="cars" id="cars" >
+            <option value="bmw">BMW</option>
+            <option value="vw">VW</option>
+            <option value="maserati">Maserati</option>
+            <option value="pagani">Pagani</option>
+            <option value="" selected></option>
+        </select>
+        <br>
+        <button type="submit">Login</button>
+        <button type="reset">reset fields</button>
+        <button type="button" onclick="alert('Hello....')">Click me</button>
+
+    </form>
+</body>
+</html>

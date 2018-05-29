@@ -1,0 +1,39 @@
+p.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p.normal {
+    font-style: normal;
+}
+
+p.itallic {
+    font-style: italic;
+}
+
+p.oblique {
+    font-style: oblique;
+}
+
+h1.larger {
+    font-size: 3em;
+}
+
+p.normal {
+    font-weight: normal;
+}
+
+p.light {
+    font-weight: lighter;
+}
+
+p.thick {
+    font-weight: bold;
+}
+
+p.thicker {
+    font-weight: 900;
+}

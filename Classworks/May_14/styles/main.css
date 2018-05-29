@@ -1,0 +1,86 @@
+* {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+
+li h2 {
+    color: green;
+}
+
+#myItem1 {
+    color: limegreen;
+}
+
+.myItem {
+    color: navy;
+}
+
+li.myItem {
+    color: orange;
+}
+
+ /* data- */
+[data-modal="open"] {
+    background-color: blueviolet;
+    padding: 13px;
+    color:white;
+}
+
+ul.menu > li {
+    display: inline-block;
+    padding: 10px;
+}
+/*
+ul.menu > li:first-child {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+ul.menu > li:last-child a {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+ul.menu > li:nth-child(2) a, 
+ul.menu > li:nth-child(3) a {
+    font-size: 20px;
+    font-weight: 700;
+    color: limegreen;
+}
+*/
+ul.menu > li:nth-child(2n + 1) a {
+    font-size: 20px;
+    font-weight: 700;
+    color: limegreen;
+}
+
+/* .myclass:empty {
+
+} */
+
+/* p + p {
+
+} */
+.myclass + p {
+    cursor: pointer;
+    font-size: 18px;
+    color: yellowgreen;
+}
+
+#par_1 ~ p {
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+    padding: 10px;
+}
+
+#par_1 ~ p:hover {
+    background-color: rgba(0, 0, 255, 0.671);
+}
+#par_1 ~ p:active {
+    background-color: rgba(255, 0, 0, 0.671);
+}

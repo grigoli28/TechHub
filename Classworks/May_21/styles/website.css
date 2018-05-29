@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #81dd4b;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav a {
+    float: left;
+    display: block;
+
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.column {
+    width: 33.33%;
+    padding: 15px;
+    float: left;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+

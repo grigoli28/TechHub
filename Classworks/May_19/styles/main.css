@@ -1,0 +1,85 @@
+body {
+    color: blue;
+}
+
+h1 {
+    color: red;
+}
+
+h2.left {
+    text-align: left;
+}
+
+h2.center {
+    text-align: center;
+}
+
+h2.right {
+    text-align: right;
+}
+
+.red {
+    color: red !important;
+}
+
+.blue {
+    color: blueviolet;
+}
+
+div {
+    border: 1px solid #000;
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    text-align: justify;
+}
+
+h2.overline {
+    text-decoration: overline;
+}
+
+h2.linethrough {
+    text-decoration: line-through;
+}
+
+h2.underline {
+    text-decoration: underline;
+}
+
+p.rtl {
+    direction: rtl;
+}
+
+/* Pseudo elements */
+
+.elements {
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 900;
+    text-align: center;
+    line-height: 200px;
+    cursor: pointer;
+    margin-bottom: 200px;
+}
+
+.elements:hover::before {
+    content: "HTML5 ";
+    width: 100%;
+    height: 100%;
+    color: red;
+}
+
+.elements:hover::after {
+    content: " JS(ES6)";
+    width: 100%;
+    height: 100%;
+    color: cyan;
+}
+
+
+i.fa.fa-cloud {
+    color: gold;
+}

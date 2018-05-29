@@ -1,0 +1,112 @@
+/* 
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change 
+ */
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* Basic Layout Structure */
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 95%;
+}
+
+/* .aside-one {
+	float: right;
+	width: 25%;
+}
+
+.aside-two {
+	float: right;
+	width: 25%;
+}
+
+.main-content {
+	width: 50%;
+	float: right;
+} */
+
+.aside-one {
+	float: left;
+	width: 25%;
+}
+
+.aside-two {
+	float: right;
+	width: 25%;
+}
+
+.main-content {
+	margin: 0 25%;
+
+}
+
+footer {
+	clear: both;
+}
+
+/* 
+ * For Demonstration Only
+ * This code is just for the purpose of the demonstration to hightlight things so that you can see them 
+ */
+
+header, .main-content, aside, footer {
+	padding: 1.5em;
+}
+
+body {
+	background-color: #333;
+	color: #333;
+}
+
+.container {
+	background-color: white;
+	/* Set the background of the container to the same as the .main-content area */
+}
+
+header {
+	background-color: darkSlateGray;
+	color: white;
+}
+
+nav li {
+	background: #999;
+	border-radius: 4px;
+	display: inline-block;
+	/* Make our navigation display in a line */
+	padding: .5em;
+}
+
+.main-content {
+	background-color: white;
+}
+
+.aside-one {
+	background-color: steelBlue;
+}
+
+.aside-two {
+	background-color: silver;
+}
+
+aside ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+aside li {
+	padding: 0 0 .5em 0;
+}
+
+footer {
+	background-color: darkSlateGray;
+	color: white;
+}

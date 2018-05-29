@@ -1,0 +1,54 @@
+div.static {
+    position: static;
+    border: 3px solid #98acac;
+}
+
+div.relative {
+    border: 3px solid #98acac;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+div.relative2 {
+    margin-top: 50px;
+    position: relative;
+    width: 600px;
+    height: 300px;
+    border: 3px solid #98acac;
+    cursor: pointer;
+}
+
+div.absolute {
+    position: absolute;
+    border: 3px solid #98acac;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+div.relative2:hover>div.absolute {
+    display: block;
+}
+
+div.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 200px;
+    border: 3px solid #98acac;
+    background-color: lightblue;
+}
+
+img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    z-index: -1;
+}

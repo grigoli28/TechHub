@@ -1,0 +1,102 @@
+/* 
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change 
+ */
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* Basic Reset */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Basic Structure */
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 95%;
+}
+
+aside {
+	float: left;
+	width: 25%;
+}
+
+
+.main-content {
+	float: right;
+	width: 70%;
+}
+
+footer {
+	clear: both;
+}
+
+.group:after {
+	content: ' ';
+	display: block;
+	clear: both;
+}
+
+
+/* 
+ * For Demonstration Only
+ * This code is just for the purpose of the demonstration to hightlight things so that you can see them 
+ */
+
+header, .main-content, aside, footer {
+	padding: 1.5em;
+}
+
+body {
+	background-color: #333;
+	color: #333;
+}
+
+header {
+	background-color: darkSlateGray;
+	color: white;
+}
+
+nav li {
+	background: #999;
+	border-radius: 4px;
+	display: inline-block;
+	/* Make our navigation display in a line */
+	padding: .5em;
+}
+
+main {
+	background-color: white;
+}
+
+.main-content {
+	background-color: white;
+}
+
+aside {
+	background-color: steelBlue;
+}
+
+aside ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+aside li {
+	padding: 0 0 .5em 0;
+}
+
+footer {
+	background-color: darkSlateGray;
+	color: white;
+}

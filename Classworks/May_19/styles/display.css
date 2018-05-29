@@ -1,0 +1,35 @@
+span.a {
+    display: inline;
+    width: 70px;
+    height: 70px;
+    padding: 11px;
+    border: 1px solid yellowgreen;
+    background-color: yellow;
+}
+
+span.b {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    padding: 11px;
+    border: 1px solid yellowgreen;
+    background-color: rgb(255, 145, 0);
+    word-wrap: break-word;
+}
+
+span.c {
+    display: block;
+    width: 70px;
+    height: 70px;
+    padding: 11px;
+    border: 1px solid yellowgreen;
+    background-color: rgb(255, 38, 0);
+}
+
+
+nav a {
+    display: inline-block;
+    padding: 7px;
+    background: green;
+    margin-right: -4px;
+}

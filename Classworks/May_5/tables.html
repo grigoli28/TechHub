@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tables</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        thead, tfoot {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        border  cellspacing="1"  
+        cellpadding="10" bordercolor="brown" 
+        bgcolor="limegreen"  background="techub_logo.png"
+        width="400" height="300"
+    -->
+    <table>
+        <caption>Students List</caption>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Vaxo</td>
+            <td>Nodadze</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>Grigol</td>
+            <td>Tchoidze</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Mamuka</td>
+            <td>Anjaparidze</td>
+            <td>19</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Mobile</th>
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>598131313</td>
+            <td>598131313</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Mobile:</th>
+            <td>598131313</td>
+        </tr>
+        <tr>
+            <td>598131313</td>
+        </tr>
+    </table>
+    <hr>
+    <table width="100%">
+        <thead>
+            <tr>
+                <th colspan="4">this is a thead of Table</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th colspan="4">this is a tfoot of Table</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

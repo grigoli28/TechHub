@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body > div:first-child {
+    width: 250px;
+    height: 100px;
+    background-color: #e0e0e0;
+    overflow: hidden;
+    /* initial, inherit, unset, auto, scroll, hidden, visible */
+}
+
+.outer {
+    border: 5px dotted rgb(61, 214, 0, 0.904);
+    border-radius: 5px;
+    width: 450px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.float {
+    padding: 10px; 
+    border: 5px solid rgb(0, 214, 29, 0.7);
+    border-radius: 5px;
+    background-color: rgb(50, 0, 214, 0.7);
+    columns: #fff;
+    float: left;
+    width: 200px;
+    margin: 0 20px 0 0;
+}
+
+.overflow {
+    overflow: auto;
+}

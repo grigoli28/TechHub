@@ -1,0 +1,42 @@
+div {
+    height: 150px;
+    margin-top: 20px;
+}
+
+.grad_1 {
+    background-image: linear-gradient(blue, lightblue);
+}
+
+.grad_2 {
+    background-image: linear-gradient(to right, blue, lightblue);
+}
+
+.grad_3 {
+    background-image: linear-gradient(to bottom right, blue, lightblue);
+}
+
+.grad_4 {
+    background-image: linear-gradient(30deg, yellow, red);
+}
+
+.grad_5 {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+}
+
+.grad_6 {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    text-align: center;
+    color: #888;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 150px;
+}
+
+.grad_7 {
+    background: linear-gradient(to right, red 5%, orange 10%, yellow 20%, green 25%, blue 50%, indigo, violet);
+    text-align: center;
+    color: #888;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 150px;
+}

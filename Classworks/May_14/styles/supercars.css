@@ -1,0 +1,23 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#header2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.right {
+    text-align: right;
+}
+
+#header3 {
+    text-align: center;
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}

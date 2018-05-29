@@ -1,0 +1,19 @@
+body {
+    font-size: 1em;
+}
+
+header, footer {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: 20px solid darkblue;
+    width: 80%;
+}
+
+main {
+    background-color: rgb(217, 255, 0);
+    padding: 20px 30px;
+    border: 50px solid rgb(255, 208, 0);
+    margin: 20px 20px 20px 10px;
+    width: 60%;
+}

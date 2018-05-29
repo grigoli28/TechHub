@@ -1,0 +1,40 @@
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+nav.left {
+    color: blue;
+    height: 800px;
+    width: 300px;
+}
+
+nav h1 {
+    font-size: 2em;
+}
+
+li a {
+    font-size: 1.5em;
+}
+
+a:hover {
+    color: red;
+}
+
+img {
+    height: 450px;
+}
+
+div {
+    max-width: 45rem;
+}
+
+footer {
+    background-color: green;
+    color: white;
+    clear: both;
+    height: 70px;
+}

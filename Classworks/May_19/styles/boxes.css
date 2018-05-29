@@ -1,0 +1,62 @@
+.big-box {
+    margin-left: 20px;
+}
+
+div {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+div.box {
+    background-color: rgb(219, 219, 219);
+}
+
+div.relative {
+    position: relative;
+}
+
+div.absolute1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+}
+
+div.absolute2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(175, 175, 175);
+}
+
+div.absolute3 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+}
+
+div.absolute4 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(175, 175, 175);
+}
+
+div.absolute5 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+}

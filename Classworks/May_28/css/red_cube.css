@@ -1,0 +1,22 @@
+div.rectangle {
+    height: 100px;
+    border: 1px solid black;
+}
+
+div.cube {
+    margin: 4px;
+    height: 92px;
+    width: 92px;
+    background-color: red;
+    animation: myanimation 8s infinite;
+}
+
+
+@keyframes myanimation {
+    25% {
+        margin-left: calc(50% - 92px / 2);
+    }
+    100% {
+        margin-left: calc(100% - 96px);
+    }
+}

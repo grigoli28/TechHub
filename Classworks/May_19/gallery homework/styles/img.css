@@ -1,0 +1,23 @@
+body {
+    background-color: beige;
+}
+
+img {
+    display: flex;
+    margin: 100px auto 20px auto;
+}
+
+#north-light {
+    width: 600px;
+    height: 400px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    padding: 3px;
+}
+
+a:hover {
+    color: red;
+}

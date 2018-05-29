@@ -1,0 +1,20 @@
+body {
+    background-color: white;
+}
+
+.container {
+    display: table;
+    margin: 100px auto;
+}
+
+div.box {
+    float: left;
+    margin: 10px;
+    box-shadow: 0 0 5px 8px rgba(120, 120, 120, 0.3);
+}
+
+div h1 {
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

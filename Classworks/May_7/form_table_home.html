@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Data</title>
+    <style>
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        th {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="POST">
+        <table>
+            <tr>
+                <th>Control Type</th>
+                <th>Data</th>
+                <th>Control</th>
+            </tr>
+            <tr>
+                <td>Text Box</td>
+                <td>Name:</td>
+                <td>
+                    <input type="text" name="fullname" placeholder="Enter Name">
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>Password:</td>
+                <td>
+                    <input type="password" name="password" placeholder="Password">
+                </td>
+            </tr>
+            <tr>
+                <td>Text Area</td>
+                <td>Address:</td>
+                <td>
+                    <textarea name="message" rows="5" cols="21" style="resize: none">Enter address</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Drop Down List</td>
+                <td>Area:</td>
+                <td>
+                    <select name="area">
+                        <option value="center">Center</option>
+                        <option value="left">Left</option>
+                        <option value="right">Right</option>
+                        <option value="bottom">Bottom</option>
+                        <option value="up">Up</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Check Box</td>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox" name="hobbies[]" value="sport" id="sport">
+                    <label for="sport">Sport</label>
+                    <br>
+                    <input type="checkbox" name="hobbies[]" value="reading" id="reading">
+                    <label for="reading">Reading</label>
+                    <br>
+                    <input type="checkbox" name="hobbies[]" value="t.v." id="t.v.">
+                    <label for="t.v.">T.V.</label>
+                    <br>
+                    <input type="checkbox" name="hobbies[]" value="internet" id="internet">
+                    <label for="internet">Internet</label>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td>Radio Buttons</td>
+                <td>Gender:</td>
+                <td>
+                    <fieldset>
+                        <legend>Gender selection</legend>
+                        <input type="radio" name="gender" value="male" id="male">
+                        <label for="male">Male</label>
+                        <br>
+                        <input type="radio" name="gender" value="male" id="female">
+                        <label for="female">Female</label>
+                        <br>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>File Upload</td>
+                <td>Your Image:</td>
+                <td>
+                    <input type="file" id="myFile">
+                </td>
+            </tr>
+            <tr>
+                <td>Buttons</td>
+                <td>Actions:</td>
+                <td>
+                    <button type="submit" onclick="alert('&#x263a Submit successful &#x263a')">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button type="button" onclick="alert('&#x263a Hi &#x263a')">Button</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    <p>
+        <strong style="color: red">Grigol Tchkoidze</strong>
+        <big>&copy;</big>
+    </p>
+
+</body>
+
+</html>

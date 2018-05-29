@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px/1.8 Georgia, serif;
+}
+
+#page-wrap {
+    width: 60%;
+    margin: 80px auto;
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -125px;
+}
+
+#l, #r {
+    width: 49%;
+}
+
+#l {
+    float: left;
+}
+
+#r {
+    float: right;
+}
+
+#l::before, #r::before {
+    content: "";
+    width: 125px;
+    height: 250px;
+}
+
+#l::before {
+    float: right;
+    background-color: black;
+}
+
+#r::before {
+    float: left;
+    background-color: black;
+}

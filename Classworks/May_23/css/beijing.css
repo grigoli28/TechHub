@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Libre Baskerville;
+}
+
+header {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5a/Panorama_Beijing.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute1 {
+    position: absolute;
+    top: 0;
+}
+
+header h1 {
+    color: rgb(255, 255, 255);
+    padding: 0px 15px;
+    font-family: Cinzel;
+    margin: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+ul li {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(26, 144, 190);
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    float: right;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+footer {
+    clear: both;
+    color: white;
+    background-color: grey;
+    background-image: url(https://blogs.nvidia.com/wp-content/uploads/2011/08/CNCC_Panorama.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+}
+
+.absolute2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+footer p {
+    padding: 15px 10px;
+    display: inline-block;
+    color: black;
+}
