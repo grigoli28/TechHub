@@ -34,14 +34,25 @@ div ul {
 
 div div:hover {
     background-color: rgb(220, 245, 241);
+    box-shadow: 0 0 10px black;
 }
 
 li {
     list-style-type: none;
 }
 
+li a {
+    text-decoration: none;
+}
+
 li a:hover {
-    color: red;
+    color: rgb(255, 45, 45);
+    text-shadow: 0 0 3px #666;
+    text-decoration: none;
+}
+
+li a:active {
+    color: rgb(1, 105, 1);
 }
 
 .clearfix {
@@ -50,6 +61,7 @@ li a:hover {
 
 footer h1 {
     font-family: Cinzel Decorative;
+    font-size: 1.5em;
 }
 
 footer {
