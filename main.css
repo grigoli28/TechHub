@@ -7,6 +7,7 @@
 
 header h1 {
     font-family: Cinzel;
+	text-shadow: 1px 2px 3px #555;
 }
 
 header {
@@ -64,6 +65,7 @@ footer h1 {
     font-family: Cinzel Decorative;
     font-size: 1.5em;
     display: inline-block;
+	text-shadow: 1px 2px 3px #9a6;
 }
 
 footer {
