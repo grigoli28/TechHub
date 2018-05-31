@@ -33,6 +33,7 @@ div ul {
 }
 
 div div:hover {
+    transform: scale(1.05, 1.05);
     background-color: rgb(220, 245, 241);
     box-shadow: 0 0 10px black;
 }
