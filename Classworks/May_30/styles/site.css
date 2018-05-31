@@ -43,10 +43,6 @@ default is flex: 0 1 auto;
     background-color: hotpink;
 }
 
-/* body {
-    padding: 2em;
-} */
-
 @media only screen and (min-width: 600px) {
     .aside {
         flex: 1 auto;

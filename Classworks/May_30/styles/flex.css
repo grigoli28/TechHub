@@ -17,8 +17,8 @@
         flex-wrap: wrap-reverse; */
     flex-flow: row wrap;
     justify-content: space-around;
-    align-items: center;
-    align-content: center;  
+    /* align-items: baseline; */
+    /* align-content: center; */
 }
 
 .flex-item {
@@ -27,7 +27,7 @@
     width: 150px;
     /* height: 150px; */
     margin-top: 10px;
-    line-height: 150px;
+    margin-bottom: 10px;
     color: #fff;
     font-size: 3em;
     text-align: center;
@@ -36,8 +36,6 @@
 
 .flex-item:first-child {
     order: 2;
-    /* flex-grow: 2; */
-    align-self: stretch;
 }
 
 .flex-item:nth-child(2) {
@@ -54,4 +52,8 @@
 
 .flex-item:nth-child(5) {
     order: 4;
+}
+
+.flex-item:nth-child(6) {
+    order: 5;
 }
