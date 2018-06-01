@@ -40,29 +40,6 @@ figcaption {
     text-align: center;
 }
 
-/* @media only screen and (min-width: 400px) {
-    .container {
-        width: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-    }
-    img {
-        max-width: 100%;
-    }
-    figure {
-        max-width: 50%;
-        margin: 10px 5px;
-        border: 3px solid black;
-        border-radius: 5px;
-    }
-    figcaption {
-        padding: 10px 5px;
-        color: black;
-        text-align: center;
-    }
-} */
-
 @media only screen and (min-width: 700px) {
     .container {
         justify-content: space-evenly;
