@@ -1,3 +1,7 @@
+* {
+    padding: 0;
+}
+
 .container {
     max-width: 1200px;
     margin-left: auto;
@@ -7,36 +11,53 @@
 
 header h1 {
     font-family: Cinzel;
-	text-shadow: 1px 2px 3px #555;
+    text-shadow: 1px 2px 3px #555;
 }
 
 header {
     text-align: center;
 }
 
-div div {
-    padding: 10px;
-    height: 180px;
+.flex-box {
+    display: flex;
+    flex-flow: row-reverse wrap-reverse;
+    justify-content: space-evenly;
+}
+
+.box {
+    padding: 20px 0 10px 0;
+    width: 200px;
     background-color: beige;
-    width: 17%;
-    float: left;
-    margin: 5px;
+    margin: 10px;
     border: 1px solid black;
+    border-radius: 5px;
     text-align: center;
+    transition: all 0.15s cubic-bezier(0.19, 1, 0, 1);
 }
 
-div p {
-    font-weight: bold;
-}
-
-div ul {
-    padding: 0;
-}
-
-div div:hover {
-    transform: scale(1.05, 1.05);
+.box:hover {
+    transform: scale(1.1, 1.1);
     background-color: rgb(220, 245, 241);
     box-shadow: 0 0 10px black;
+    border-radius: 10px;
+}
+
+.box span {
+    color: rgb(61, 61, 61);
+}
+
+.box:hover span {
+    color: black;
+    text-shadow: 1px 1px 3px grey;
+}
+
+header span {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+div span {
+    font-weight: bold;
 }
 
 li {
@@ -49,7 +70,7 @@ li a {
 
 li a:hover {
     color: rgb(255, 45, 45);
-    text-shadow: 0 0 3px #666;
+    text-shadow: 0 0 3px #999;
     text-decoration: none;
 }
 
@@ -57,15 +78,11 @@ li a:active {
     color: rgb(1, 105, 1);
 }
 
-.clearfix {
-    clear: both;
-}
-
 footer h1 {
     font-family: Cinzel Decorative;
     font-size: 1.5em;
     display: inline-block;
-	text-shadow: 1px 2px 3px #9a6;
+    text-shadow: 1px 2px 3px #9a6;
 }
 
 footer {
