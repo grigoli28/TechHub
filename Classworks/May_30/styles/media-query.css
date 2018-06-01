@@ -15,21 +15,22 @@ h2 {
     font-size: 1.7em;
 }
 
+/* ==== Flex properties start ==== */
+
 .container {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 img {
-    max-width: 100%;
-    /* width: 200px; */
+    max-width: 199px;
 }
 
 figure {
-    max-width: 45%;
-    margin: 10px 0;
+    max-width: 100%;
+    margin: 10px 5px;
     border: 3px solid black;
     border-radius: 5px;
 }
@@ -40,15 +41,18 @@ figcaption {
     text-align: center;
 }
 
-@media only screen and (min-width: 700px) {
-    .container {
-        justify-content: space-evenly;
-    }
+@media only screen and (min-width: 500px) {
     img {
-        width: 300px;
+        max-width: 100%;
     }
     figure {
-        margin: 10px 5px;
+        max-width: 45%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    img {
+        width: 300px;
     }
 }
 
@@ -57,6 +61,6 @@ figcaption {
         width: unset;
     }
     figure {
-        max-width: 30%;
+        max-width: 27%;
     }
 }
