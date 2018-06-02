@@ -35,21 +35,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
 
-h1 {}
-
 h2 {
 	font: 2.25rem/1.2 Helvetica, Verdana, sans-serif;
 }
 
-h3 {}
-
 h4 {
 	font-size: 1.2rem;
 }
-
-h5 {}
-
-h6 {}
 
 p {
 	font-size: .925rem;
@@ -78,8 +70,6 @@ a:hover, a:focus, a:active {
 }
 
 /* navigation */
-
-#quick-nav {}
 
 #quick-nav li {
 	border-right: 1px solid #9ac9f4;
@@ -119,13 +109,15 @@ a:hover, a:focus, a:active {
 	color: white;
 }
 
-/* ======================================== */
+/* ==================================== */
 
 .container {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 }
+
+/* header */
 
 .header-top {
 	display: flex;
