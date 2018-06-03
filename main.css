@@ -62,61 +62,159 @@ header span {
 }
 
 nav {
-    background-color: #043867;
+    background-color: #E0E0E0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 nav ul li {
     display: inline-block;
-    width: 33.33%;
+    width: 33.333%;
 }
 
 nav ul li a {
     color: white;
+    font-size: 1.8em;
     text-decoration: none;
     text-align: center;
     display: block;
-    padding: 15px 20px;
-    border-left: .1px solid #e7ecf0;
+    padding: 5px 20px;
+    border-right: .1px solid #002342;
 }
 
 nav ul li:first-child a {
-    border-right: .1px solid #e7ecf0;
+    color: #8e44ad;
+    border-right: none;
+}
+
+nav ul li:nth-child(2) a {
+    color: #2980b9;
+}
+
+nav ul li:last-child a {
+    color: #16a085;
 }
 
 nav ul li a:hover {
-    background-color: #002342;
+    background-color: #BDBDBD;
+    animation: mylinkanim .5s infinite alternate linear;
+}
+
+@keyframes mylinkanim {
+    0% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 80%, #4385c1 100%);
+    }
+    10% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 70%, #4385c1 90%);
+    }
+    20% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 60%, #4385c1 80%);
+    }
+    30% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 50%, #4385c1 70%);
+    }
+    40% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 40%, #4385c1 60%);
+    }
+    50% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 30%, #4385c1 50%);
+    }
+    60% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 20%, #4385c1 40%);
+    }
+    70% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 10%, #4385c1 30%);
+    }
+    80% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 5%, #4385c1 20%);
+    }
+    90% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 0%, #4385c1 10%);
+    }
+    100% {
+        color: white;
+        background-image: linear-gradient(0deg, #16a085 0%, #4385c1 0%);
+    }
 }
 
 /* Main */
 
 .flex-box {
     display: flex;
-    flex-flow: row-reverse wrap-reverse;
-    justify-content: space-between;
+    flex-flow: column-reverse nowrap;
 }
 
 .block {
-    margin-top: 30px;
-    width: 32%;
-    height: 200px;
-    background-color: #e7ecf0;
-    text-align: center;
-    transition: all 0.15s cubic-bezier(0.19, 1, 0, 1);
+    margin-top: 45px;
+    padding-top: 30px;
+    background-color: #ecf0f1;
+    display: flex;
+    flex-flow: row-reverse wrap-reverse;
+    justify-content: space-evenly;
 }
 
-/* .block:hover {
-    transform: scale(1.05, 1.05);
-    background-color: rgb(220, 245, 241);
+.flex-box>div:first-child>div {
+    background-color: #8e44ad;
+}
+
+.flex-box>div:nth-child(2)>div {
+    background-color: #2980b9;
+}
+
+.flex-box>div:last-child>div {
+    background-color: #16a085;
+}
+
+.box {
+    background-color: #ecf0f1;
+    flex-basis: 34%;
+    margin-bottom: 30px;
+    height: 200px;
+    text-align: center;
+    transition: all 0.1s cubic-bezier(0.19, 1, 0, 1);
+    border-radius: 5px;
+}
+
+.box:hover {
+    transform: scale(1.03, 1.03);
+    background-color: #E0F7FA;
     box-shadow: 0 0 10px black;
     border-radius: 5px;
-} */
+}
 
-main ul {
+main>div:first-child h2 {
+    color: #8e44ad;
+    margin: 20px;
+}
+
+main>div:nth-child(2) h2 {
+    color: #2980b9;
+    margin: 20px;
+}
+
+main>div:last-child h2 {
+    color: #16a085;
+    margin: 20px;
+}
+
+main div ul {
     list-style: none;
 }
 
 main ul li a {
     text-decoration: none;
+    color: black;
 }
 
 main ul li a:hover {
@@ -132,21 +230,23 @@ main ul li a:active {
 /* Footer */
 
 footer {
-    color: white;
-    padding: 30px;
     background-color: #34383c;
+    height: 300px;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+footer span {
+    animation: mycopyanim 5s infinite alternate;
+    display: block;
     font-family: Cinzel Decorative;
     font-size: 1.5em;
+    text-align: center;
     text-align: center;
     text-shadow: 1px 2px 3px #9a6;
 }
 
-/* animation-name: myanim;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; */
-
-/* @keyframes myanim {
+@keyframes mycopyanim {
     0% {
         color: rgb(255, 0, 255);
     }
@@ -162,4 +262,4 @@ footer {
     100% {
         color: rgb(0, 255, 213);
     }
-} */
+}
