@@ -1,5 +1,26 @@
-* {
+/* 
+ * Colors
+ * 
+ * Dark gray		#34383c
+ * medium gray		#81858a
+ * purple			#620e6e
+ * blue				#4385c1
+ * light blue		#9ac9f4
+ * darker blue		#043867
+ * darkest blue		#002342
+ * blue tint		#e7ecf0
+ * green			#7aa120
+ */
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
     padding: 0;
+    margin: 0;
 }
 
 .container {
@@ -9,90 +30,190 @@
     box-sizing: border-box;
 }
 
-header h1 {
-    font-family: Cinzel;
-    text-shadow: 1px 2px 3px #555;
+/* Header */
+
+header .container {
+    padding: 30px;
 }
 
 header {
+    background-color: #34495e;
     text-align: center;
 }
 
-.flex-box {
-    display: flex;
-    flex-flow: row-reverse wrap-reverse;
-    justify-content: space-evenly;
-}
-
-.box {
-    padding: 20px 0 10px 0;
-    width: 200px;
-    background-color: beige;
-    margin: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    text-align: center;
-    transition: all 0.15s cubic-bezier(0.19, 1, 0, 1);
-}
-
-.box:hover {
-    transform: scale(1.1, 1.1);
-    background-color: rgb(220, 245, 241);
-    box-shadow: 0 0 10px black;
-    border-radius: 10px;
-}
-
-.box span {
-    color: rgb(61, 61, 61);
-}
-
-.box:hover span {
-    color: black;
-    text-shadow: 1px 1px 3px grey;
+header h1 {
+    color: white;
+    font-family: Cinzel;
+    text-shadow: 2px 2px 0 #555;
 }
 
 header span {
     display: inline-block;
     margin: 10px 0;
+    color: white;
 }
 
-div span {
-    font-weight: bold;
+/* Navigation */
+
+.flex-nav {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-evenly;
 }
 
-li {
-    list-style-type: none;
+nav {
+    background-color: #E0E0E0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
-li a {
+nav ul li {
+    display: inline-block;
+    width: 33.333%;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.8em;
     text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 5px 20px;
+    border-right: .1px solid #002342;
 }
 
-li a:hover {
+nav ul li:first-child a {
+    color: #8e44ad;
+    border-right: none;
+    transition: all .5s linear;
+}
+
+nav ul li:nth-child(2) a {
+    color: #2980b9;
+    transition: all .5s linear;
+}
+
+nav ul li:last-child a {
+    color: #16a085;
+    transition: all .5s linear;
+}
+
+nav ul li:first-child a:hover {
+    color: white;
+    background-color: #8e44ad;
+}
+
+nav ul li:nth-child(2) a:hover {
+    color: white;
+    background-color: #2980b9;
+}
+
+nav ul li:last-child a:hover {
+    color: white;
+    background-color: #16a085;
+}
+
+/* Main */
+
+.flex-box {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+}
+
+.block {
+    margin-top: 45px;
+    padding-top: 30px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row-reverse wrap-reverse;
+    justify-content: space-evenly;
+}
+
+.flex-box>div:first-child>div {
+    background-color: #8e44ad;
+}
+
+.flex-box>div:nth-child(2)>div {
+    background-color: #2980b9;
+}
+
+.flex-box>div:last-child>div {
+    background-color: #16a085;
+}
+
+.box {
+    background-color: #ecf0f1;
+    flex-basis: 34%;
+    margin-bottom: 30px;
+    height: 200px;
+    text-align: center;
+    transition: all 0.1s cubic-bezier(0.19, 1, 0, 1);
+    border-radius: 5px;
+}
+
+.box:hover {
+    transform: scale(1.03, 1.03);
+    background-color: #E0F7FA;
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+}
+
+main>div:first-child h2 {
+    color: #8e44ad;
+    margin: 20px;
+}
+
+main>div:nth-child(2) h2 {
+    color: #2980b9;
+    margin: 20px;
+}
+
+main>div:last-child h2 {
+    color: #16a085;
+    margin: 20px;
+}
+
+main div ul {
+    list-style: none;
+}
+
+main ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+main ul li a:hover {
     color: rgb(255, 45, 45);
     text-shadow: 0 0 3px #999;
     text-decoration: none;
 }
 
-li a:active {
+main ul li a:active {
     color: rgb(1, 105, 1);
 }
 
-footer h1 {
+/* Footer */
+
+footer {
+    background-color: #34383c;
+    height: 300px;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+footer span {
+    animation: mycopyanim 5s infinite alternate;
+    display: block;
     font-family: Cinzel Decorative;
     font-size: 1.5em;
-    display: inline-block;
+    text-align: center;
+    text-align: center;
     text-shadow: 1px 2px 3px #9a6;
 }
 
-footer {
-    animation-name: myanim;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes myanim {
+@keyframes mycopyanim {
     0% {
         color: rgb(255, 0, 255);
     }
