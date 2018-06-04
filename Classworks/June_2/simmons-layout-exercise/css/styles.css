@@ -237,8 +237,11 @@ ul {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	left: calc(50% - 840px / 2);
-	top: calc(50% - 210.47px / 2);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	/* left: calc(50% - 840px / 2);
+	top: calc(50% - 210.47px / 2); */
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
 }
