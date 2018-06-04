@@ -206,41 +206,45 @@ main ul li a:hover {
     text-decoration: none;
 }
 
-main ul li a:active {
-    color: rgb(1, 105, 1);
-}
-
 /* Footer */
 
 footer {
     background-color: #34383c;
+    color: white;
+    font-family: Cinzel Decorative;
     height: 300px;
+    text-align: center;
     margin-top: 40px;
     padding: 30px;
 }
 
+footer div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 footer span {
+    margin-top: 10px;
     animation: mycopyanim 5s infinite alternate;
     display: block;
-    font-family: Cinzel Decorative;
     font-size: 1.5em;
-    text-align: center;
-    text-align: center;
     text-shadow: 1px 2px 3px #9a6;
 }
 
 @keyframes mycopyanim {
     0% {
-        color: rgb(255, 0, 255);
+        color: rgb(250, 71, 250);
     }
     25% {
-        color: rgb(255, 72, 0);
+        color: rgb(255, 114, 58);
     }
     50% {
         color: rgb(153, 205, 50);
     }
     75% {
-        color: rgb(0, 60, 255);
+        color: rgb(82, 118, 238);
     }
     100% {
         color: rgb(0, 255, 213);
