@@ -70,6 +70,7 @@ header {
     text-align: center;
     display: block;
     padding: 10px;
+    transition: all .3s linear;
 }
 
 .nav li a:hover {
@@ -118,6 +119,7 @@ header .social a, .search a, .cart, .total-cart {
 }
 
 .banner-link a {
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     color: white;
     background-color: #8B00FF;
     padding: 10px 0;
@@ -227,6 +229,7 @@ main .news-block {
 }
 
 main .news-block a {
+    transition: all .3s ease-in-out;
     font-size: 1.2em;
     font-weight: bold;
     color: black;
