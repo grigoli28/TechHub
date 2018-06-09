@@ -24,6 +24,9 @@ ul {
     max-width: 1200px;
     margin: 0 auto;
 }
+header .container {
+    max-width: 1484px;
+}
 
 a {
     text-decoration: none;
@@ -305,7 +308,10 @@ footer .detailed-nav a:hover {
 footer .bottom-footer {
     background-color: #04a9f5;
     color: #000;
-    display: flex;
+}
+
+footer .bottom-footer .container {
+    padding: 20px 0;
 }
 
 footer .bottom-footer a {
@@ -316,10 +322,6 @@ footer .bottom-footer a {
 
 footer .bottom-footer a:hover {
     color: white;
-}
-
-footer .bottom-footer>div {
-    margin: 20px;
 }
 
 @media only screen and (max-width: 479px) {
@@ -438,7 +440,7 @@ footer .bottom-footer>div {
         flex-direction: row;
         justify-content: space-around;
     }
-    .bottom-footer {
+    .bottom-footer .container {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
@@ -505,7 +507,7 @@ footer .bottom-footer>div {
     .detailed-nav .box h3 {
         text-align: left;
     }
-    .bottom-footer {
+    .bottom-footer .container {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
@@ -521,7 +523,7 @@ footer .bottom-footer>div {
         margin: 10px 0 10px 0;
     }
     header .container {
-        max-width: 100%;
+        /* max-width: 100%; */
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -605,7 +607,7 @@ footer .bottom-footer>div {
     .detailed-nav .box h3 {
         text-align: left;
     }
-    .bottom-footer {
+    .bottom-footer .container {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
@@ -617,44 +619,3 @@ footer .bottom-footer>div {
         padding: 10px;
     }
 }
-
-/* @media only screen and (min-width: 1210px) {
-
-    
-    #text {
-        display: none;
-    }
-    #notext {
-        display: inline-block;
-    }
-    .search-cart {
-        color: #04a9f5;
-        display: flex;
-        flex-flow: row nowrap;
-    }
-    .search-cart a {
-        color: #04a9f5;
-        text-decoration: none;
-    }
-    .search {
-        margin-right: 10px;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-evenly;
-    }
-    .cart {
-        text-align: right;
-    }
-    .total-cart {
-        background-color: #04a9f5;
-        display: flex;
-        align-items: flex-end;
-    }
-    .total-cart span {
-        text-align: center;
-        width: 20px;
-        font-weight: bold;
-        color: black;
-        padding: 10px;
-    }
-} */
