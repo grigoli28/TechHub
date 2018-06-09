@@ -1,5 +1,10 @@
 /* GENERAL PROPERTIES */
-
+.news-box::before{
+    content: "\f144";
+    font-family: FontAwesome;
+    color: #04a9f5;
+    
+}
 html {
     box-sizing: border-box;
 }
