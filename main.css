@@ -12,13 +12,8 @@
  * green			#7aa120
  */
 
-html {
+* {
     box-sizing: border-box;
-    height: 100%;
-}
-
-*, *::before, *::after {
-    box-sizing: inherit;
     padding: 0;
     margin: 0;
 }
@@ -27,47 +22,52 @@ html {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    box-sizing: border-box;
 }
+
 
 /* Header */
-
-header .container {
-    padding: 30px;
-    position: relative;
-}
 
 header {
     background-color: #34495e;
     text-align: center;
 }
 
-header h1 {
+.h-cont {
+    padding: 30px;
+}
+
+h1 {
     color: white;
     font-family: Cinzel;
     text-shadow: 2px 2px 0 #555;
 }
 
-header p {
+p {
     display: inline-block;
-    margin: 10px 0;
     color: white;
 }
 
-header a {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    position: absolute;
-    left: calc(20%);
-    top: calc(50% - 32px);
+.git-link {
     text-decoration: none;
     color: white;
+}
+
+.git-link::before {
+    content: "\f0c1";
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+.git-link::after {
+    content: "\f09b";
+    font-family: FontAwesome;
+    font-size: 3em;
 }
 
 header a i {
     margin-right: 5px;
 }
+
 
 /* Navigation */
 
@@ -84,12 +84,12 @@ nav {
     z-index: 1;
 }
 
-nav ul li {
+.nav-list {
     display: inline-block;
     width: 33.333%;
 }
 
-nav ul li a {
+.nav-link {
     color: white;
     font-size: 1.8em;
     text-decoration: none;
@@ -99,36 +99,37 @@ nav ul li a {
     border-right: .1px solid #002342;
 }
 
-nav ul li:first-child a {
+.nav-link1 {
     color: #8e44ad;
     border-right: none;
     transition: all .5s linear;
 }
 
-nav ul li:nth-child(2) a {
+.nav-link2 {
     color: #2980b9;
     transition: all .5s linear;
 }
 
-nav ul li:last-child a {
+.nav-link3 {
     color: #16a085;
     transition: all .5s linear;
 }
 
-nav ul li:first-child a:hover {
+.nav-link1:hover {
     color: white;
     background-color: #8e44ad;
 }
 
-nav ul li:nth-child(2) a:hover {
+.nav-link2:hover {
     color: white;
     background-color: #2980b9;
 }
 
-nav ul li:last-child a:hover {
+.nav-link3:hover {
     color: white;
     background-color: #16a085;
 }
+
 
 /* Main */
 
@@ -147,15 +148,15 @@ nav ul li:last-child a:hover {
     justify-content: space-evenly;
 }
 
-.flex-box>div:first-child>div {
+.block1 {
     background-color: #8e44ad;
 }
 
-.flex-box>div:nth-child(2)>div {
+.block2 {
     background-color: #2980b9;
 }
 
-.flex-box>div:last-child>div {
+.block3 {
     background-color: #16a085;
 }
 
@@ -165,7 +166,7 @@ nav ul li:last-child a:hover {
     margin-bottom: 30px;
     height: 200px;
     text-align: center;
-    transition: all 0.1s cubic-bezier(0.19, 1, 0, 1);
+    transition: all 0.3s ease;
     border-radius: 5px;
 }
 
@@ -176,56 +177,55 @@ nav ul li:last-child a:hover {
     border-radius: 5px;
 }
 
-main>div:first-child h2 {
+.block1 h2 {
     color: #8e44ad;
     margin: 20px;
 }
 
-main>div:nth-child(2) h2 {
+.block2 h2 {
     color: #2980b9;
     margin: 20px;
 }
 
-main>div:last-child h2 {
+.block3 h2 {
     color: #16a085;
     margin: 20px;
 }
 
-main div ul {
+.box-ul {
     list-style: none;
 }
 
-main ul li a {
+.box-link {
     text-decoration: none;
     color: black;
 }
 
-main ul li a:hover {
+.box-link:hover {
     color: rgb(255, 45, 45);
     text-shadow: 0 0 3px #999;
     text-decoration: none;
 }
 
+
 /* Footer */
 
 footer {
     background-color: #34383c;
-    color: white;
     font-family: Cinzel Decorative;
     height: 300px;
     text-align: center;
     margin-top: 40px;
-    padding: 30px;
 }
 
-footer div {
+.f-cont {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer span {
+.f-cont span {
     margin-top: 10px;
     animation: mycopyanim 5s infinite alternate;
     display: block;
