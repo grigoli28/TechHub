@@ -1001,6 +1001,9 @@ header .container {
     .nav-box {
         flex-basis: initial;
     }
+}
+
+@media only screen and (min-width: 1252px) {
     .nav-box:last-child h3::after {
         top: 50px;
     }
