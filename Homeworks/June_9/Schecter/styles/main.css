@@ -230,8 +230,25 @@ img {
 }
 
 .hr-line-h1::before {
-    content: "\f005";
+    color: #04a9f5;
     font-family: FontAwesome;
+    margin-right: 20px;
+}
+
+.hr-line-h1:first-child::before {
+    content: "\f005";
+}
+
+.hr-line-h1:nth-child(2)::before {
+    content: "\f0a3";
+}
+
+.hr-line-h1:nth-child(3)::before {
+    content: "\f1ea";
+}
+
+.hr-line-h1:last-child::before {
+    content: "\f16d";
 }
 
 .hr-line-h1 i {
