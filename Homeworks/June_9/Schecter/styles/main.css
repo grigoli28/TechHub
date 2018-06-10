@@ -1,10 +1,5 @@
-html,
-body {
-    box-sizing: border-box;
-}
-
 * {
-    box-sizing: inherit;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -153,9 +148,12 @@ img {
 }
 
 .cart-link::after {
-    content: "\f07a";
+    background: url(../pics/top-cart.jpg);
+    content: "";
     font-family: FontAwesome;
-    font-size: 1.5em;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
 }
 
 .cart-box {
@@ -235,19 +233,23 @@ img {
     margin-right: 20px;
 }
 
-.hr-line-h1:first-child::before {
+.l-h-1::before {
     content: "\f005";
 }
 
-.hr-line-h1:nth-child(2)::before {
+.l-h-2::before {
     content: "\f0a3";
 }
 
-.hr-line-h1:nth-child(3)::before {
-    content: "\f1ea";
+.l-h-3::before {
+    background-image: url(../pics/title-news.png);
+    content: "";
+    height: 24px;
+    width: 24px;
+    display: inline-block;
 }
 
-.hr-line-h1:last-child::before {
+.l-h-4::before {
     content: "\f16d";
 }
 
@@ -278,6 +280,7 @@ img {
 
 .spot-h2 {
     margin: 10px 0;
+    text-align: center;
 }
 
 .det-box {
@@ -331,9 +334,10 @@ img {
 .news-box::before {
     content: "\f144";
     font-family: FontAwesome;
+    color: #04a9f5;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5px;
 }
 
 .news-box {
@@ -427,10 +431,6 @@ img {
     align-items: center;
 }
 
-.f-social-block {
-    margin: 20px;
-}
-
 .f-social-box {
     display: flex;
     flex-flow: row nowrap;
@@ -445,11 +445,26 @@ img {
     color: #fff;
 }
 
+.f-social-block {
+    margin: 20px;
+}
+
+.f-social-block span {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.f-social-block span::before {
+    content: "\f0ac";
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+
 .copy-info {
     margin: 20px;
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 499px) {
     .h-social-box {
         display: none;
     }
@@ -472,13 +487,15 @@ img {
         flex-basis: 100%;
     }
     .search-block {
-        flex-flow: column nowrap;
-        align-items: stretch;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        height: initial;
         width: 100%;
     }
     .search-box {
         flex-flow: row nowrap;
         align-items: center;
+        flex-basis: 75%;
     }
     .cart-box {
         text-align: center;
@@ -488,8 +505,219 @@ img {
         justify-content: center;
         align-items: center;
         margin: 0;
+        flex-basis: 25%;
     }
     .cart-info span {
-        padding: 0;
+        padding: 5px;
+    }
+    .line-box {
+        right: 0;
+        bottom: 4px;
+    }
+    .line-link {
+        font-size: 1em;
+        padding: 5px;
+    }
+    .h1-white-back {
+        width: 270px;
+    }
+    .double-hr-line {
+        margin: 40px 0;
+    }
+    .spotlight-block {
+        flex-flow: column nowrap;
+    }
+    .spot-box {
+        margin-top: 30px;
+    }
+    .spot-h2 {
+        font-size: 1em;
+    }
+    .spot-box:nth-child(2n+1) {
+        margin-right: 0;
+    }
+    .news-block {
+        flex-flow: column nowrap;
+    }
+    .f-nav-block {
+        flex-flow: column nowrap;
+    }
+    .f-nav-h3::after {
+        width: 25%;
+    }
+    .site-descr .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 799px) {
+    .h-social-box {
+        display: none;
+    }
+    .h-nav-block {
+        margin-top: 10px;
+    }
+    .main-nav {
+        margin: 0;
+    }
+    .logo-link {
+        margin-bottom: 10px;
+    }
+    .main-nav-link {
+        padding: 5px;
+    }
+    .main-nav li {
+        flex-basis: 30%;
+    }
+    .search-block {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        height: initial;
+        width: 100%;
+    }
+    .search-box {
+        flex-flow: row nowrap;
+        align-items: center;
+        flex-basis: 75%;
+    }
+    .cart-box {
+        text-align: center;
+        display: inline;
+    }
+    .cart-info {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        flex-basis: 25%;
+    }
+    .cart-info span {
+        padding: 5px;
+    }
+    .line-link {
+        font-size: 1em;
+        padding: 5px;
+    }
+    .h1-white-back {
+        width: 270px;
+    }
+    .double-hr-line {
+        margin: 40px 0;
+    }
+    .spotlight-block {
+        flex-flow: row wrap;
+    }
+    .spot-box {
+        margin-top: 30px;
+    }
+    .spot-h2 {
+        font-size: 1.3em;
+    }
+    .spot-box:nth-child(2n+1) {
+        margin-right: 0;
+    }
+    .news-block {
+        flex-flow: row wrap;
+    }
+    .news-box {
+        flex-basis: 50%;
+    }
+    .f-nav-block {
+        flex-flow: column nowrap;
+    }
+    .f-nav-h3::after {
+        width: 25%;
+    }
+    .site-descr .container {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    .flex-box {
+        position: relative;
+    }
+    .h-social-box {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+    }
+    .h-nav-block {
+        margin-top: 10px;
+    }
+    .main-nav {
+        margin: 0;
+    }
+    .logo-link {
+        margin-bottom: 10px;
+    }
+    .main-nav-link {
+        padding: 5px;
+    }
+    .main-nav li {
+        flex-basis: 30%;
+    }
+    .search-block {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50px;
+    }
+    .search-box {
+        flex-flow: column nowrap;
+        margin-right: 10px;
+    }
+    .search-link::before {
+        margin-left: -20px;
+    }
+    .cart-box {
+        text-align: center;
+        display: inline;
+    }
+    .cart-info {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        flex-basis: 25%;
+    }
+    .cart-info span {
+        padding: 5px;
+    }
+    .line-link {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    .h1-white-back {
+        width: 270px;
+    }
+    .double-hr-line {
+        margin: 40px 0;
+    }
+    .spotlight-block {
+        flex-flow: row wrap;
+    }
+    .spot-box {
+        margin-top: 30px;
+    }
+    .spot-h2 {
+        font-size: 1.5em;
+    }
+    .spot-box:nth-child(2n+1) {
+        margin-right: 0;
+    }
+    .news-block {
+        flex-flow: row wrap;
+    }
+    .news-box {
+        flex-basis: 50%;
+    }
+    .f-nav-block {
+        flex-flow: column nowrap;
+    }
+    .f-nav-h3::after {
+        width: 25%;
+    }
+    .site-descr .container {
+        flex-direction: row;
     }
 }
