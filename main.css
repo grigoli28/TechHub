@@ -226,9 +226,7 @@ footer {
 }
 
 .f-cont span {
-    margin-top: 10px;
     animation: mycopyanim 5s infinite alternate;
-    display: block;
     font-size: 1.5em;
     text-shadow: 1px 2px 3px #9a6;
 }
