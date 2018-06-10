@@ -296,29 +296,37 @@ header .container {
 .det-box {
     color: #fff;
     display: inline-block;
-    width: 70px;
+    width: 65.31px;
+    height: 28px;
+    position: relative;
+    cursor: pointer;
 }
 
 .det {
     background-color: #000;
+    border-radius: 3px;
+    width: 65.31px;
     display: block;
     text-align: center;
-    padding: 10px;
+    padding: 5px 10px;
+    position: absolute;
 }
 
 .buy {
-    display: none;
-}
-
-.det-box:hover>.det {
-    display: none;
-}
-
-.det-box:hover>.buy {
     background-color: #04a9f5;
+    border-radius: 3px;
+    width: 65.31px;
     display: block;
     text-align: center;
-    padding: 10px;
+    padding: 5px 10px;
+    position: absolute;
+    opacity: 0;
+    transition: all .5s ease-out;
+    z-index: 1;
+}
+
+.det-box:hover .buy {
+    opacity: 1;
 }
 
 
@@ -376,6 +384,17 @@ header .container {
 
 .news-par {
     font-weight: bold;
+}
+
+
+/* Youtube */
+
+.youtube-block {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
 }
 
 
@@ -475,6 +494,9 @@ header .container {
 }
 
 @media only screen and (max-width: 499px) {
+    .sticky {
+        position: initial;
+    }
     .h-social-box {
         display: none;
     }
@@ -562,8 +584,16 @@ header .container {
 }
 
 @media only screen and (min-width: 500px) and (max-width: 799px) {
+    .sticky {
+        position: initial;
+    }
+    .flex-box {
+        position: relative;
+    }
     .h-social-box {
-        display: none;
+        position: absolute;
+        left: 10px;
+        top: 15px;
     }
     .h-nav-block {
         margin-top: 10px;
@@ -581,15 +611,17 @@ header .container {
         flex-basis: 30%;
     }
     .search-block {
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        height: initial;
-        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 50px;
     }
     .search-box {
-        flex-flow: row nowrap;
-        align-items: center;
-        flex-basis: 75%;
+        flex-flow: column nowrap;
+        margin-right: 10px;
+    }
+    .search-link::before {
+        margin-left: -20px;
     }
     .cart-box {
         text-align: center;
@@ -602,7 +634,7 @@ header .container {
         flex-basis: 25%;
     }
     .cart-info span {
-        padding: 5px;
+        padding: 5px 10px;
     }
     .line-link {
         font-size: 1em;
@@ -643,8 +675,12 @@ header .container {
     }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
+@media only screen and (min-width: 800px) and (max-width: 899px) {
+    .sticky {
+        position: initial;
+    }
     .flex-box {
+        flex-flow: column;
         position: relative;
     }
     .h-social-box {
@@ -654,6 +690,7 @@ header .container {
     }
     .h-nav-block {
         margin-top: 10px;
+        flex-flow: column;
     }
     .main-nav {
         margin: 0;
@@ -691,7 +728,7 @@ header .container {
         flex-basis: 25%;
     }
     .cart-info span {
-        padding: 5px;
+        padding: 5px 10px;
     }
     .line-link {
         font-size: 1.5em;
@@ -722,12 +759,245 @@ header .container {
         flex-basis: 50%;
     }
     .f-nav-block {
-        flex-flow: column nowrap;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .nav-box {
+        flex-basis: initial;
     }
     .f-nav-h3::after {
         width: 25%;
     }
     .site-descr .container {
         flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1099px) {
+    .flex-box {
+        flex-flow: column;
+        position: relative;
+    }
+    .h-social-box {
+        position: absolute;
+        left: 20px;
+        top: 23px;
+    }
+    .h-nav-block {
+        margin-top: 10px;
+        flex-flow: column;
+    }
+    .main-nav {
+        margin: 0;
+        flex-flow: row nowrap;
+    }
+    .logo-link {
+        margin-bottom: 10px;
+    }
+    .main-nav-link {
+        padding: 10px;
+    }
+    .search-block {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        height: 50px;
+    }
+    .search-box {
+        flex-flow: column nowrap;
+    }
+    .search-link::before {
+        margin-left: -20px;
+    }
+    .cart-box {
+        text-align: center;
+        display: inline;
+    }
+    .cart-info {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: #000;
+        color: #04a9f5;
+    }
+    .cart-info span {
+        padding: 5px 10px;
+    }
+    .line-link {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    .h1-white-back {
+        width: 270px;
+    }
+    .double-hr-line {
+        margin: 40px 0;
+    }
+    .spotlight-block {
+        flex-flow: row wrap;
+    }
+    .spot-box {
+        margin-top: 30px;
+    }
+    .spot-h2 {
+        font-size: 1.5em;
+    }
+    .spot-box:nth-child(2n+1) {
+        margin-right: 0;
+    }
+    .news-block {
+        flex-flow: row wrap;
+    }
+    .news-box {
+        flex-basis: 30%;
+    }
+    .f-nav-block {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .nav-box {
+        flex-basis: initial;
+    }
+    .f-nav-h3::after {
+        width: 25%;
+    }
+    .site-descr .container {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1199px) {
+    .flex-box {
+        flex-flow: column;
+        position: relative;
+    }
+    .h-social-box {
+        position: absolute;
+        left: 20px;
+        top: 23px;
+    }
+    .h-nav-block {
+        margin-top: 10px;
+        flex-flow: column;
+    }
+    .main-nav {
+        margin: 0;
+        flex-flow: row nowrap;
+    }
+    .logo-link {
+        margin-bottom: 10px;
+    }
+    .main-nav-link {
+        padding: 10px;
+    }
+    .search-block {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        height: 50px;
+    }
+    .search-box {
+        flex-flow: column nowrap;
+    }
+    .search-link::before {
+        margin-left: -20px;
+    }
+    .cart-box {
+        text-align: center;
+        display: inline;
+    }
+    .cart-info {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: #000;
+        color: #04a9f5;
+    }
+    .cart-info span {
+        padding: 5px 10px;
+    }
+    .line-link {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    .h1-white-back {
+        width: 270px;
+    }
+    .double-hr-line {
+        margin: 40px 0;
+    }
+    .spotlight-block {
+        flex-flow: row wrap;
+    }
+    .spot-box {
+        margin-top: 30px;
+    }
+    .spot-h2 {
+        font-size: 1.5em;
+    }
+    .spot-box:nth-child(2n+1) {
+        margin-right: 0;
+    }
+    .news-block {
+        flex-flow: row wrap;
+    }
+    .news-box {
+        flex-basis: 30%;
+    }
+    .f-nav-block {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .nav-box {
+        flex-basis: initial;
+    }
+    .f-nav-h3::after {
+        width: 25%;
+    }
+    .site-descr .container {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1251px) {
+    .flex-box {
+        flex-flow: row nowrap;
+    }
+    .h-social-link {
+        margin: 8px;
+    }
+    .h-nav-block {
+        flex-flow: row nowrap;
+    }
+    .logo-link {
+        margin-right: 10px;
+    }
+    .main-nav {
+        margin: 0;
+        flex-flow: row nowrap;
+    }
+    .search-block {
+        height: 83px;
+        margin-left: 15px;
+    }
+    .search-box {
+        flex-flow: column nowrap;
+    }
+    .search-link::before {
+        margin-left: -20px;
+    }
+    .cart-box {
+        text-align: center;
+        display: inline;
+    }
+    .cart-info {
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .cart-info span {
+        padding: 5px 10px;
+    }
+    .nav-box {
+        flex-basis: initial;
     }
 }
