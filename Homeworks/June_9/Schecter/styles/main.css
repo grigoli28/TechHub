@@ -261,6 +261,7 @@ header .container {
 
 .l-h-4::before {
     content: "\f167";
+    color: #f00;
 }
 
 .hr-line-h1 i {
