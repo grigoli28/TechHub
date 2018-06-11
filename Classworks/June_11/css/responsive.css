@@ -1,0 +1,42 @@
+body {
+    font-size: 15px;
+}
+
+button {
+    background: #1abc9c;
+    border: 0;
+    padding: 10px 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.top {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "hero hero cta1" "hero hero cta2";
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 400px;
+    background: #fff url(../pics/taco.jpg);
+    background-size: cover;
+    background-position: bottom right;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.hero>* {
+    background: var(--yellow);
+    padding: 5px;
+}
