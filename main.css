@@ -12,8 +12,21 @@
  * green			#7aa120
  */
 
-* {
+:root {
+    --green: #16a085;
+    --blue: #2980b9;
+    --purple: #8e44ad;
+    --blue-tint: #e0f7fa;
+}
+
+html {
     box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: interit;
     padding: 0;
     margin: 0;
 }
@@ -22,6 +35,12 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.grid-box {
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 
