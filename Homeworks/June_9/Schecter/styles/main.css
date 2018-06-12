@@ -143,7 +143,7 @@ header .container {
     color: #04a9f5;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 100%;
 }
 
