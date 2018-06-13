@@ -1,0 +1,451 @@
+/* 
+ * Colors
+ * 
+ * Dark gray		#34383c
+ * medium gray		#81858a
+ * purple			#620e6e
+ * blue				#4385c1
+ * light blue		#9ac9f4
+ * darker blue		#043867
+ * darkest blue		#002342
+ * blue tint		#e7ecf0
+ * green			#7aa120
+ */
+
+* {
+    padding: 0;
+}
+
+body {
+    background: white;
+    color: #81858a;
+    font: 1em/1.6 Helvetica, Verdana, sans-serif;
+}
+
+header {
+    background: #4385c1;
+    color: white;
+    font-size: .9rem;
+}
+
+footer {
+    background: #34383c;
+    color: white;
+    padding: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+h2 {
+    font: 2.25rem/1.2 Helvetica, Verdana, sans-serif;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: .925rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* Links */
+
+a:link,
+a:visited {
+    color: #4385c1;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #043867;
+}
+
+
+/* Header */
+
+.branding {
+    color: #9ac9f4;
+    text-transform: uppercase;
+}
+
+
+/* navigation */
+
+#quick-nav li {
+    border-right: 1px solid #9ac9f4;
+}
+
+#quick-nav li:last-of-type {
+    border: none;
+}
+
+#quick-nav a:link,
+#quick-nav a:visited {
+    color: white;
+}
+
+#quick-nav a:hover,
+#quick-nav a:focus,
+#quick-nav a:active {
+    color: #9ac9f4;
+}
+
+#main-nav {
+    background-color: #043867;
+    font-family: Georgia, serif;
+    font-size: 1.2em;
+}
+
+#main-nav li:hover {
+    background-color: #002342;
+}
+
+#full-nav a:link,
+#full-nav a:visited {
+    color: #81858a;
+}
+
+#full-nav h3 a:link,
+#full-nav h3 a:visited {
+    color: white;
+}
+
+#full-nav a:hover,
+#full-nav a:focus,
+#full-nav a:active {
+    color: white;
+}
+
+
+/* General Properties */
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    padding: 0;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+
+/* Quick navigation */
+
+#quick-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#quick-nav ul li {
+    display: inline-block;
+}
+
+#quick-nav ul li a {
+    padding: 10px;
+}
+
+#quick-nav ul li:first-child a {
+    padding-left: 0;
+}
+
+
+/* Branding */
+
+.branding {
+    width: 290px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+
+/* Utilities navigation */
+
+#utilities-nav {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.utilities .button {
+    color: white;
+    border: 1px solid #719cc4;
+    padding: 5px 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.utilities a:first-child {
+    margin-right: 0;
+}
+
+.utilities .fa-search::before {
+    margin-right: 10px;
+}
+
+.utilities .fa-link::before {
+    margin-right: 10px;
+}
+
+
+/* Main Navigation */
+
+#main-nav ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#main-nav ul li {
+    display: inline-block;
+    width: 25%;
+    border-left: .1px solid #4385c1;
+}
+
+#main-nav ul li:last-child {
+    border-right: 1px solid #4385c1;
+}
+
+#main-nav ul li a {
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Hero */
+
+.hero {
+    position: relative;
+    z-index: -1;
+    margin: 60px 0 20px 0;
+}
+
+.hero img {
+    filter: brightness(60%);
+    width: 100%;
+}
+
+.absolute {
+    width: 70%;
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* left: calc(50% - 840px / 2);
+	top: calc(50% - 210.47px / 2); */
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.absolute h3 {
+    text-transform: uppercase;
+    font-size: 4em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.absolute p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Slogan */
+
+.slogan {
+    background-color: #7aa120;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 25px;
+}
+
+.slogan h3 {
+    font-size: 3em;
+    width: 60%;
+    color: white;
+    margin: 0;
+}
+
+.slogan p {
+    color: white;
+    margin-left: 20px;
+}
+
+.slogan i {
+    font-size: .8em;
+}
+
+
+/* Callout Blocks */
+
+.callout {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.block {
+    display: inline-block;
+    width: 26%;
+    height: 300px;
+    background-color: #e7ecf0;
+    margin-top: 30px;
+    padding: 10px 30px;
+}
+
+.block4 {
+    background-color: #620e6e;
+    padding: 5px 20px 15px 40px;
+}
+
+.block4 a {
+    color: white;
+}
+
+.block4 a p {
+    font-size: 2em;
+    width: 50%;
+}
+
+.block4 a p i {
+    font-size: .8em;
+}
+
+.block5 {
+    background-color: #4385c1;
+    padding: 5px 20px 15px 40px;
+}
+
+.block5 a {
+    color: white;
+}
+
+.block5 a p {
+    font-size: 2em;
+    width: 50%;
+}
+
+.block5 a p i {
+    font-size: .8em;
+}
+
+.block6 {
+    background-color: initial;
+    padding: 0 60px 20px 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+.block6 h4 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.flex-date-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-blk {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 10px 20px 5px 20px;
+    display: inline-block;
+    color: #7aa120;
+    margin-right: 30px;
+}
+
+.date-blk span {
+    font-size: 2em;
+}
+
+.date-descr {
+    color: #4385c1;
+    display: inline-block;
+}
+
+
+/* Aditional navigation */
+
+.aditional-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    margin: 60px 0;
+}
+
+.aditional-nav a {
+    border: 2px solid #4385c1;
+    border-radius: 5px;
+    padding: 10px 50px;
+    width: 15%;
+    text-align: center;
+}
+
+
+/* Full navigation */
+
+#full-nav {
+    display: flex;
+    flex-flow: column wrap;
+    height: 600px;
+}
+
+#full-nav div {
+    width: 230px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+
+/* Copyright */
+
+small {
+    display: block;
+    text-align: center;
+    margin: 50px;
+}

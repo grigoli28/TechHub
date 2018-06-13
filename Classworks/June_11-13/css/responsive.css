@@ -174,13 +174,13 @@ img {
     .menu ul {
         max-height: 0;
         overflow: hidden;
-        transform: rotateY(90deg);
+        transform: rotateX(90deg);
         transition: all .5s;
     }
     [aria-expanded="true"]~ul {
         display: grid;
         max-height: 500px;
-        transform: rotateY(0deg);
+        transform: rotateX(0deg);
     }
     [aria-expanded="false"] .close {
         display: none;
