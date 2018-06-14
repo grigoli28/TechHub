@@ -57,6 +57,11 @@ ul {
     list-style: none;
 }
 
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
 .container {
     max-width: 1200px;
     margin-left: auto;
@@ -172,11 +177,12 @@ nav {
 
 .main-content {
     display: grid;
+    grid-gap: 20px;
     grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: auto;
+    grid-auto-rows: 1fr;
     grid-template-areas: "june june june june june june june" "may may may may may may may" "april april april april april april april";
     flex-flow: column-reverse nowrap;
-    align-items: initial;
+    align-items: center;
 }
 
 .april {
