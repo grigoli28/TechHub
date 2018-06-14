@@ -6,7 +6,7 @@
     --blue-tint: #e0e0e0;
     --darker-blue: #34495e;
     --darkest-blue: #34383c;
-    --months-count: 3;
+    --months-count: 2;
 }
 
 html {
@@ -87,35 +87,40 @@ ul {
 /* Header */
 
 .header {
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     text-align: center;
     align-content: center;
     color: #fff;
 }
 
+.header>* {
+    flex-basis: 100%;
+}
+
 .header__title {
     font-family: Cinzel;
-    padding-top: 10px;
 }
 
 .header__parag {
-    padding: 5px;
+    padding-top: 5px;
 }
 
 .git-link {
+    display: inline-block;
     color: #fff;
-    padding-bottom: 10px;
+    margin: 10px 0;
 }
 
 .git-link::before {
     content: "\f0c1";
-    font-family: FontAwesome;
+    font-family: "Font Awesome\ 5 Free";
     font-size: 2em;
+    font-weight: 900;
 }
 
 .git-link::after {
     content: "\f09b";
-    font-family: FontAwesome;
+    font-family: "Font Awesome\ 5 Brands";
     font-size: 3em;
 }
 
@@ -148,27 +153,19 @@ nav {
 }
 
 .main-nav__link--first {
-    color: var(--purple);
+    color: var(--green);
     border-right: 0;
 }
 
 .main-nav__link--first:hover {
-    background-color: var(--purple);
-}
-
-.main-nav__link--second {
-    color: var(--green);
-}
-
-.main-nav__link--second:hover {
     background-color: var(--green);
 }
 
-.main-nav__link--third {
+.main-nav__link--second {
     color: var(--blue);
 }
 
-.main-nav__link--third:hover {
+.main-nav__link--second:hover {
     background-color: var(--blue);
 }
 
@@ -176,45 +173,36 @@ nav {
 /* Content */
 
 .main-content {
+    margin: 50px auto;
     display: grid;
-    grid-gap: 20px;
+    grid-row-gap: 50px;
     grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: 1fr;
-    grid-template-areas: "june june june june june june june" "may may may may may may may" "april april april april april april april";
-    flex-flow: column-reverse nowrap;
-    align-items: center;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "june1 june1 june1 june june2 june2 june2" "may1 may1 may1 may may2 may2 may2" "may3 may3 may3 may may4 may4 may4"
 }
 
-.april {
-    grid-area: april;
+.may1 {
+    grid-area: may1;
 }
 
-.may {
-    grid-area: may;
+.may2 {
+    grid-area: may2;
 }
 
-.june {
-    grid-area: june;
+.may3 {
+    grid-area: may3;
 }
 
-.outline-box {
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    margin-top: 45px;
-    padding-top: 30px;
-    border-radius: 10px;
+.may4 {
+    grid-area: may4;
 }
 
-.outline-box--1 {
-    background-color: var(--purple);
+.june1 {
+    grid-area: june1;
 }
 
-.outline-box--2 {
-    background-color: var(--green);
-}
-
-.outline-box--3 {
-    background-color: var(--blue);
+.june2 {
+    grid-area: june2;
 }
 
 .homework {
