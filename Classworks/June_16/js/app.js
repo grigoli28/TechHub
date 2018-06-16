@@ -78,21 +78,51 @@
 
 
 
-let a = 4;
-switch (a) {
-    case 3:
-        alert("3");
-        break;
+// let a = 4;
+// switch (a) {
+//     case 3:
+//         alert("3");
+//         break;
 
-    case 4:
-        alert("4");
-        break;
+//     case 4:
+//         alert("4");
+//         break;
 
-    case 5:
-        alert("5");
-        break;
+//     case 5:
+//         alert("5");
+//         break;
 
-    default:
-        alert("Default");
-        break;
-}
+//     default:
+//         alert("Default");
+//         break;
+// }
+
+
+
+
+
+
+// let i = 0;
+// while (i < 10) {
+//     document.writeln(i);
+//     i++;
+// }
+
+// document.write("<br>")
+// while (i) {
+//     document.writeln(i);
+//     i--;
+// }
+
+// while (i < 3)
+//     alert(i++);
+
+
+
+
+
+// let i = 0;
+// do {
+//     alert(i);
+//     i++;
+// } while (i < 4);
