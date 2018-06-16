@@ -93,19 +93,7 @@
             <img src="https://source.unsplash.com/random/210x210" alt="">
         </section>
     </div>
-    <script>
-        const navButton = document.querySelector('button[aria-expanded]');
-
-        function toggleNav({
-            target
-        }) {
-            // console.log(target);
-            const expanded = target.getAttribute('aria-expanded') === 'true' || false;
-            navButton.setAttribute('aria-expanded', !expanded);
-        }
-        navButton.addEventListener('click', toggleNav);
-        // console.log(navButton.toString());
-    </script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
