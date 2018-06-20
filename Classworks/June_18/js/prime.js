@@ -1,10 +1,10 @@
 function isPrime(n) {
-    let counter = 1;
-    for (let i = 2; i < Math.round(n / 2); i++) {
+    let counter = 0;
+    for (let i = 2; i <= Math.round(n / 2); i++) {
         if (n % i == 0)
             ++counter;
     }
-    if (counter > 2) return false;
+    if (counter > 0) return false;
     else return true;
 }
 
