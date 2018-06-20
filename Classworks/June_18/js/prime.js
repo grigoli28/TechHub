@@ -11,6 +11,6 @@ function isPrime(n) {
 let n = Number(prompt("Enter a number"));
 for (let i = 2; i <= n; i++) {
     if (isPrime(i)) {
-        console.log(i);
+        document.writeln(i);
     }
 }
