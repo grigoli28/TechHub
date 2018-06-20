@@ -77,7 +77,7 @@ console.log(`removed ${removed}`);
 console.log(numbers);
 
 
-*/
+
 let numbers = [];
 numbers.push(1);
 numbers.push(3);
@@ -135,3 +135,37 @@ let matrix = [
 ];
 
 console.log(matrix[0][1]);
+*/
+
+
+
+/*  */
+// DOM
+// DOM Tree
+// console.log(document);
+// console.log(document.documentElement);
+
+// console.log(document.body);
+// console.log(document.head);
+
+// childNodes, firstChild, lastChild
+// console.log(document.body.childNodes);
+// console.log(document.body.firstChild);
+// console.log(document.body.firstElementChild);
+// console.log(document.body.lastChild);
+
+for (let i = 0; i < document.body.childNodes.length; i += 1) {
+    if (document.body.childNodes[i].nodeName.toLocaleLowerCase() == 'div') {
+        document.body.childNodes[i].textContent = "გამარჯობა";
+        // document.body.childNodes[i].innerHTML = "<b>innerHTML</b>;;
+        // document.body.childNodes[i].innerText = "<b>innerHTML</b>";
+
+    }
+    // console.log(document.body.childNodes[i].nodeName);
+}
+
+// document.body.childNodes[1] = 'Gamarjoba';
+// console.log(document.body.parentNode === document.documentElement);
+console.log(document.head.nextSibling);
+console.log(document.head.nextElementSibling);
+console.log(document.head.previousElementSibling);
