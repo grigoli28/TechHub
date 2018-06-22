@@ -79,7 +79,7 @@ console.log(pi); */
 // let message = `sheni asakia: ${age}`; // newer approach
 // console.log(message);
 
-// parseInt;
+// parseInt();
 
 
 // let age = parseInt(prompt("tqveni asaki:"));

@@ -9,9 +9,6 @@ console.log(defaultParams(5));
 console.log(defaultParams());
  */
 
-
-
-
 // Arrays
 /*  
 let years = new Array(10);
@@ -137,8 +134,6 @@ let matrix = [
 console.log(matrix[0][1]);
 */
 
-
-
 /*  */
 // DOM
 // DOM Tree
@@ -155,17 +150,18 @@ console.log(matrix[0][1]);
 // console.log(document.body.lastChild);
 
 for (let i = 0; i < document.body.childNodes.length; i += 1) {
-    if (document.body.childNodes[i].nodeName.toLocaleLowerCase() == 'div') {
-        document.body.childNodes[i].textContent = "გამარჯობა";
-        // document.body.childNodes[i].innerHTML = "<b>innerHTML</b>;;
-        // document.body.childNodes[i].innerText = "<b>innerHTML</b>";
 
-    }
-    // console.log(document.body.childNodes[i].nodeName);
+
+    if (document.body.childNodes[i].nodeName.toLocaleLowerCase() == "div") {
+    document.body.childNodes[i].textContent = "გამარჯობა";
+    // document.body.childNodes[i].textContent = "<b>გამარჯობა</b>";
+    // document.body.childNodes[i].innerHTML = "<b>გამარჯობა</b>";
+    // document.body.childNodes[i].innerText = "<b>გამარჯობა</b>";
+  }
+  // console.log(document.body.childNodes[i].nodeName);
 }
-
-// document.body.childNodes[1] = 'Gamarjoba';
+// document.body.childNodes[1] = 'Gamarjoba'; // not allowed to change value
 // console.log(document.body.parentNode === document.documentElement);
-console.log(document.head.nextSibling);
-console.log(document.head.nextElementSibling);
-console.log(document.head.previousElementSibling);
+// console.log(document.head.nextSibling);
+// console.log(document.head.nextElementSibling);
+// console.log(document.body.previousElementSibling);
