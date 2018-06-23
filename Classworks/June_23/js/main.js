@@ -328,7 +328,7 @@ for (let char of str) {
 console.log("uppercase".toUpperCase());
 console.log("LOWERCASE".toLowerCase());
 console.log(str.lastIndexOf('.'));
-*/
+
 
 let str = "Hello from the other side.";
 let target = 'the';
@@ -340,3 +340,4 @@ while (true) {
     console.log(`Found at ${foundPos}`);
     pos = foundPos + 1;
 }
+*/

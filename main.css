@@ -58,15 +58,6 @@ ul {
     margin-right: auto;
 }
 
-.grid-box {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    grid-template-areas: "header" "nav" "content" "footer";
-}
-
 .flex-box {
     display: flex;
     justify-content: center;
@@ -167,8 +158,8 @@ nav {
     margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "june1 june1 june1 june june2 june2 june2" "may1 may1 may1 may may2 may2 may2" "may3 may3 may3 may may4 may4 may4"
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "june1 june1 june1 june1 june1 june1 june1" "june2 june2 june2 free june3 june3 june3" "may1 may1 may1 free may2 may2 may2" "may3 may3 may3 free may4 may4 may4"
 }
 
 .may1 {
@@ -188,11 +179,16 @@ nav {
 }
 
 .june1 {
-    grid-area: june1;
+    /* grid-area: june1; */
+    grid-column: 3 / span 3;
 }
 
 .june2 {
     grid-area: june2;
+}
+
+.june3 {
+    grid-area: june3;
 }
 
 .homework {
