@@ -1,5 +1,5 @@
 function Calculator() {
-    this.operators = {
+    operators = {
         "+": (a, b) => a + b,
         "-": (a, b) => a - b,
     };
@@ -7,8 +7,8 @@ function Calculator() {
         let num1 = Number(str.split(" ")[0]); // Extracts first number
         let num2 = Number(str.split(" ")[2]); // Extracts second number
         let oper = str.split(" ")[1]; //Extracts operator
-        for (let key in this.operators) {
-            if (key == oper) return this.operators[key](num1, num2);
+        for (let key in operators) {
+            if (key == oper) return operators[key](num1, num2);
         }
         return "Unknown operation";
     };

@@ -1,3 +1,9 @@
+// new Object declaration
+// adding/removing object properties
+// object.key
+// object[key]
+
+
 "use strict";
 /*  
 // let user = new Object();
