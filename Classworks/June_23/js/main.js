@@ -1,7 +1,20 @@
+// callback functions
 // new Object declaration
 // adding/removing object properties
-// object.key
-// object[key]
+// object.property / object["property"]
+// writable, enumerable, configureble
+// Object.defineProperty()
+// Object.defineProperties()
+// Object.assign()
+// function.call()
+// function.apply()
+// Symbol()
+// Constructor function
+// string.charAt()
+// string.toUpperCase()
+// string.toLowerCase()
+// string.indexOf()
+// string.lastIndexOf()
 
 
 "use strict";
@@ -196,7 +209,7 @@ user.sayHi = function() {
 function blaBla() {
     alert(this);
 }
-// blaBla();
+// blaBla(); // gives error when in strict mode
 
 
 let userV2 = {
@@ -205,7 +218,7 @@ let userV2 = {
         let func = () => alert(this.name);
         func()
     },
-    test: () => {
+    test: () => { // arrow functions doesn't have own this.
         alert(this.name)
     }
 }
@@ -272,7 +285,6 @@ let customer = {
     [id]: 140,
 }
 */
-
 
 
 

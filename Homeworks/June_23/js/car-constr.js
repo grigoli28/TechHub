@@ -1,7 +1,7 @@
 function Car() {
-    this.name = "Unset";
-    this.color = "Unset";
-    this.brand = "Unset";
+    this.name = "";
+    this.color = "";
+    this.brand = "";
     this.setName = function(str) {
         this.name = str;
         return this;

@@ -7,7 +7,8 @@
 // string.substr()
 // document.querySelector()
 // Array.from()
-// .matches()
+// Array.sort()
+// Element.matches()
 
 
 /*  

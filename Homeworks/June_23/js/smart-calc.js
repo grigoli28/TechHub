@@ -1,5 +1,5 @@
 function Calculator() {
-    operators = {
+    let operators = {
         "+": (a, b) => a + b,
         "-": (a, b) => a - b,
     };
@@ -13,7 +13,7 @@ function Calculator() {
         return "Unknown operation";
     };
     this.addOperator = function(name, func) {
-        this.operators[name] = func;
+        operators[name] = func;
     };
 }
 
