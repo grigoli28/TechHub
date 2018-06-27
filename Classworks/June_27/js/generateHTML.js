@@ -33,5 +33,3 @@ let generateHTML = function(count, tagName, selector, content = '', childCount =
 }
 
 generateHTML(4, 'p', '#container', 'This is paragraph', 2, 'strong');
-``
-`
