@@ -157,9 +157,9 @@ nav {
     margin: 0 auto;
     margin-bottom: 50px;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "june1 june1 june1 june1 june1 june1 june1" "june2 june2 june2 free june3 june3 june3" "may1 may1 may1 free may2 may2 may2" "may3 may3 may3 free may4 may4 may4"
+    /* grid-template-columns: repeat(7, 1fr); */
+    /* grid-template-rows: repeat(4, auto); */
+    grid-template-areas: "left-side left-side june1 june1 june1 right-side right-side" "june2 june2 june2 center-col june3 june3 june3" "may1 may1 may1 center-col may2 may2 may2" "may3 may3 may3 center-col may4 may4 may4"
 }
 
 .may1 {
@@ -179,8 +179,8 @@ nav {
 }
 
 .june1 {
-    /* grid-area: june1; */
-    grid-column: 3 / span 3;
+    grid-area: june1;
+    /* grid-column: 3 / span 3; */
 }
 
 .june2 {
