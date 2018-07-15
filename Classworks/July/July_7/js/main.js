@@ -1,4 +1,6 @@
 // CLOSURE
+// setTimeout, clearTimeout
+// setInterval, clearInterval
 
 // document.addEventListener('DOMContentLoaded', (event) => {
 //     let h1 = document.getElementsByTagName('h1')[0];
@@ -70,6 +72,11 @@
 
 
 
+
+/* CLOSURE
+
+
+
 function add(first, second) {
     return first + second;
 }
@@ -83,20 +90,20 @@ function mul(first, second) {
 }
 
 function identityf(x) { // !imporant
-    return function() {
+    return function () {
         return x;
     }
 }
 
 function addf(first) {
-    return function(second) {
+    return function (second) {
         return first + second;
     }
 }
 
 function liftf(binary) {
-    return function(first) {
-        return function(second) {
+    return function (first) {
+        return function (second) {
             return binary(first, second);
         }
     }
@@ -118,3 +125,5 @@ let addF = addf(8)(5);
 
 let onePlus = curry(add, 1);
 console.log(onePlus(50));
+
+*/

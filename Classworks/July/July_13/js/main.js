@@ -1,6 +1,7 @@
+// Design Patterns
 // Factory Class Pattern
-
-
+// Variables that start with _ (underscore) are considered as Private
+// 'this' object in class's static methods is a CONSTRUCTOR
 
 /* 
 String.prototype.show = function() {
@@ -55,7 +56,7 @@ function Person(name, birthday) {
 // let gela2 = Person('Gela', new Date(1990, 2, 5));
 // gela2.sayName();
 
-// If variable name starts with '_' then it is private !important
+
 
 
 
@@ -86,9 +87,6 @@ human.sayName();
 
 /* CLASSES
 
-
-
-
 String.prototype.repeat = function(n) {
     return new Array(n + 1).join(this);
 }
@@ -113,7 +111,7 @@ class Animal {
     }
 
     static staticMethod() {
-        console.log(this === Animal); // this in static methods is CONSTRUCTOR !important
+        console.log(this === Animal); // 'this' in static methods is a CONSTRUCTOR !important
     }
 }
 

@@ -1,6 +1,12 @@
-// FIRST CLASS CITIZEN functions
+// FIRST CLASS functions
 // local scope, block scope => lexical scope | Environment
-
+// Inner & Outer Environments
+// Inner environment has reference (წვდომა) to outer
+// any function when created has its own [[Entivronment]] property
+// Immediately Invoked Function Expression
+// __proto__
+// prototype -> Object()
+// arguments.callee
 
 /*  
 {
@@ -24,15 +30,14 @@ function tell(name) {
     // console.log(`${text}, ${name}`);
 }
 
-// inner -> outer
-// outer -> inner
+
 
 tell('Gella');
 
 
 function saySomething(firstName, lastName) {
 
-    // private function
+    // private function !important
     return function getFullName() {
         return `${firstName} ${lastName}`;
     }

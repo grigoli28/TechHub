@@ -1,7 +1,8 @@
+// Object destructuring
 // data-* // new attribute type in HTML !important
 // className, classList
 // toggleClass
-
+// .forEach()
 
 
 
