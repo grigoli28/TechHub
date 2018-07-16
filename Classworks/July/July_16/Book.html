@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="js/Book.js"></script>
+    <script>
+        let books = [
+            new Book(02323, 'Sherlock Holmes', 900, ['John', 'Doe'], 1870),
+            new Book(53452, 'Baywatch', 400, 'James', 2001),
+            new Book(69512, 'Titanic', 100, ['Jane', 'Doe'], 1995)
+        ]
+        for (let book of books)
+            book.print();
+    </script>
+</body>
+
+</html>
