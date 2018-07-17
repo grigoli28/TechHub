@@ -1,7 +1,11 @@
+// Design Patterns
 // Constructor design pattern
+// Constructor.prototype
 // __proto__ -> Parent
 // prototype -> Cloned Value
 // Object.create(Object.prototype);
+// Object.defineProperty
+// Object.defineProperties
 
 let animal = {
     eats: true
@@ -21,7 +25,6 @@ let jeka = new Dog('White Jeka');
 
 // console.log(Dog.prototype.constructor === Dog); // gives false because we added prototype animal and constructor has changed !important
 // console.log(jeka.constructor === Dog); // !important
-
 
 
 // let obj = {};
@@ -63,8 +66,7 @@ function defineProp(obj, key, value, writable = true, configurable = true, enume
         enumerable
     }
 
-    // obj is passed by reference !important
-    Object.defineProperty(obj, key, config);
+    Object.defineProperty(obj, key, config); // obj parameter is passed by reference !important
 }
 
 let person = Object.create(Object.prototype);
