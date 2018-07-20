@@ -1,3 +1,5 @@
+// default parameters
+
 function showSomething(title = "Untitled", width = 200, height = 200, items = []) {
     console.log(`title = ${title}, width = ${width}, height = ${height}, items = ${items}`);
 }

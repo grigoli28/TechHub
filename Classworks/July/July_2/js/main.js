@@ -2,7 +2,7 @@
 // data-* // new attribute type in HTML !important
 // className, classList
 // attr.nodeName, .nodeValue
-// toggleClass
+// .toggle()
 // .forEach()
 
 
