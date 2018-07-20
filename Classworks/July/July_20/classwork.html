@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <script>
+        let tableRows = document.getElementsByTagName('div');
+        let middleRows = [
+            tableRows[tableRows.length / 2 - 1],
+            tableRows[tableRows.length / 2]
+        ];
+        middleRows.forEach((element) => {
+            for (let child of element.children) {
+                child.style.backgroundColor = 'lightblue';
+            }
+        })
+        let middleColumns = [];
+        for (let row of tableRows) {
+            middleColumns.push(row.children[row.children.length / 2 - 1]);
+            middleColumns.push(row.children[row.children.length / 2]);
+        }
+        middleColumns.forEach((item) => {
+            if (item !== middleColumns[middleColumns.length / 2 - 1] &&
+                item !== middleColumns[middleColumns.length / 2]) {
+                item.style.backgroundColor = 'navy';
+
+            } else {
+                item.style.backgroundColor = 'lightblue';
+            }
+        })
+    </script>
+</body>
+
+</html>
