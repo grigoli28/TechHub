@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Start</div>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <ul>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <div>End</div>
+    <script>
+        document.body.style.backgroundColor = 'lightgreen';
+        let body = document.body;
+        let childNodes = body.childNodes;
+        childNodes.forEach((el) => {
+            if (el.nodeName.toLowerCase() === 'ul')
+                if (el.children.length) {
+                    let firstLi = el.firstElementChild;
+                    console.log(firstLi, firstLi.nextElementSibling)
+                    // for (let liEl of el.children) {
+                    //     console.log(liEl.textContent)
+                    // }
+                }
+        })
+
+        // console.log(document.body.nodeType)
+    </script>
+    <div>More stuff...</div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
