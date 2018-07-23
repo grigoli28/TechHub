@@ -1,13 +1,13 @@
 :root {
     --green: #1abc9c;
     --blue: #00a8ff;
-    --purple: #8e44ad;
+    --light-purple: #BA68C8;
     --light-blue-tint: #e0f7fa;
     --blue-tint: #e0e0e0;
     --darker-blue: #34495e;
     --darkest-blue: #34383c;
     --light-grey: #e8e8e8;
-    --months-count: 2;
+    --months-count: 3;
 }
 
 html,
@@ -154,6 +154,14 @@ nav {
     background-color: var(--blue);
 }
 
+.main-nav__link--third {
+    color: var(--light-purple);
+}
+
+.main-nav__link--third:hover {
+    background-color: var(--light-purple);
+}
+
 
 /* Content */
 
@@ -163,7 +171,7 @@ nav {
     display: grid;
     /* grid-template-columns: repeat(7, 1fr); */
     /* grid-template-rows: repeat(4, auto); */
-    grid-template-areas: "june june june center-col june1 june1 june1" "june2 june2 june2 center-col june3 june3 june3" "may1 may1 may1 center-col may2 may2 may2" "may3 may3 may3 center-col may4 may4 may4"
+    grid-template-areas: "free free july july july free-space free-space" "june june june center-col june1 june1 june1" "june2 june2 june2 center-col june3 june3 june3" "may1 may1 may1 center-col may2 may2 may2" "may3 may3 may3 center-col may4 may4 may4"
 }
 
 .may1 {
@@ -196,6 +204,10 @@ nav {
 
 .june3 {
     grid-area: june3;
+}
+
+.july {
+    grid-area: july;
 }
 
 .homework {
@@ -232,6 +244,15 @@ nav {
     background-color: var(--blue);
 }
 
+.homework--july {
+    color: var(--light-purple);
+}
+
+.homework--july:hover {
+    color: white;
+    background-color: var(--light-purple);
+}
+
 .homework__date {
     text-align: center;
     padding: 20px;
@@ -250,7 +271,7 @@ nav {
 /* Footer */
 
 .footer {
-    height: 500px;
+    padding: 100px;
 }
 
 .copyright {

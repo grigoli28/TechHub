@@ -1,18 +1,3 @@
-/*  
-function aclean(arr) {
-    let cleaned = new Map();
-    arr.forEach((item) => {
-        if (!cleaned.has(item.sort())) {
-            cleaned.set(`${item.sort()}`, item);
-        }
-    })
-}
-
-let arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares'];
-alert(aclean(arr));
-*/
-
-
 /* ID is considered as window 's property !important
 console.log(<id>)
 // getElementsBy*
