@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol id="list">
+        <li>Hello</li>
+        <li>World</li>
+    </ol>
+    <script>
+        function clear(elem) {
+            while (elem.children.length)
+                elem.children[elem.children.length - 1].remove();
+        }
+        clear(list);
+    </script>
+</body>
+
+</html>
