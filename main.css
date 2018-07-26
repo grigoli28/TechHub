@@ -90,6 +90,17 @@ ul {
     padding-top: 5px;
 }
 
+.proj-link-1 {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.proj-link-1:hover {
+    text-shadow: 0 0 3px var(--light-grey);
+}
+
 .git-link {
     display: inline-block;
     color: #fff;

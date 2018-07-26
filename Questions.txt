@@ -1,0 +1,17 @@
+======== 1 =========
+What's difference with and without constructor Dog?
+function Animal() {
+    this.name = 'Animal';
+    this.eats = true;
+}
+
+function Dog() {
+    this.barks = true;
+}
+
+Dog.prototype = new Animal();
+Dog.prototype.constructor = Dog;
+let dog = new Dog();
+console.log(dog.constructor);
+
+========= 2 ==========
