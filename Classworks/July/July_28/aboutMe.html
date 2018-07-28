@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .col {
+            display: inline-block;
+        }
+        
+        .show {
+            display: initial !important;
+        }
+        
+        img {
+            display: none;
+            max-width: 400px;
+            max-height: 400px;
+        }
+        
+        #result {
+            display: none;
+        }
+        
+        #loading {
+            display: none;
+            font-weight: 900;
+            position: fixed;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="loading">Loading...</div>
+        <h3>Write Something About You</h3>
+        <div class="col col1">
+            <p>Day</p>
+            <input id="day" type="text">
+            <p>Year</p>
+            <input id="year" type="text">
+            <p>Month</p>
+            <input id="month" type="text">
+            <p>City</p>
+            <input id="city" type="text">
+        </div>
+        <div class="col col2">
+            <p>About</p>
+            <textarea id="about" name="" id="" cols="20" rows="15"></textarea>
+            <button id="save">Save</button>
+        </div>
+        <div class="col col3">
+            <img id="pic" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/112972821/original/643263003293b5dd59b33bda89db601b969dd571/be-your-front-end-developer.jpg" alt="">
+        </div>
+        <div id="result">
+            <div class="result__item">
+                <p>Your Birthday is</p>
+                <b id="resday"></b>
+            </div>
+            <div class="result__item">
+                <p>Your Birth Year is</p>
+                <b id="resyear"></b>
+            </div>
+            <div class="result__item">
+                <p>Your BirthMonth is</p>
+                <b id="resmonth"></b>
+            </div>
+            <div class="result__item">
+                <p>You Live in</p>
+                <b id="rescity"></b>
+            </div>
+
+            <div class="result__item">
+                <p>Your About me</p>
+                <b id="resabout"></b>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/aboutMe.js"></script>
+</body>
+
+</html>
