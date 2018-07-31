@@ -58,6 +58,59 @@ let ps = document.getElementsByName('p');
 // console.log(document.body instanceof EventTarget);
 
 
-username.addEventListener('input', ({target}) => {
-    result.textContent = target.value;
-})
+// username.addEventListener('input', ({target}) => {
+//     result.textContent = target.value;
+// })
+
+username.addEventListener('input', updateText);
+lastname.addEventListener('input', updateText);
+
+function updateText({ target }) {
+    // result.textContent = target.value;
+    // console.log(target.dataset.change)
+    let toChange = document.querySelector(`#${target.dataset.change}`);
+    toChange.textContent = target.value;
+}
+
+document.body.info = {
+    name: "Body Info",
+    title: "HTML5",
+}
+
+Element.prototype.whoAmI = function() {
+        console.log(`I am - <${this.tagName.toLowerCase()}> tag`);
+    }
+    // document.body.whoAmI();
+    // console.log(document.body.info.title);
+
+// element.hasAttribute(name)
+// element.getAttribute(name)
+// element.setAttribute(name, value)
+// element.removeAttribute(name)
+
+myWow.setAttribute('class', 'wow__class wow__class--item')
+    // console.log(myWow.hasAttribute('class'))
+    // console.log(myWow.getAttribute('id'))
+    // console.log(myWow)
+    // myWow.removeAttribute('class')
+    // console.log(myWow)
+
+// console.log(myWow.attributes)
+for (let attr of myWow.attributes) {
+    // console.log(attr.name, attr.value)
+}
+
+// console.log(myWow.style.marginBottom)
+
+// className, classList
+// console.log(myWow.className)
+myWow.classList.add('custom--class')
+    // myWow.classList.contains('custom--class')
+    // myWow.classList.remove('custom--class')
+    // classList.toggle()
+
+console.log(myWow.marginTop)
+
+let computed = getComputedStyle(myWow);
+
+console.log(computed.marginLeft)
