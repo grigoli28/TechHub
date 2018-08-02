@@ -1,3 +1,9 @@
+// element:contains(str)
+// element:odd / even
+// .html()
+// .text()
+// .attr()
+
 // jQuery(document).ready(function() {
 //     alert('DOM');
 // });
@@ -13,7 +19,7 @@ $(document).ready(function() {
     // let trElements = $('table tr');
     // console.log(trElements);
 
-    const customersDiv = $('#customersDiv');
+    // const customersDiv = $('#customersDiv');
     // console.log(customersDiv);
 
     // const wowClass = $('.wow');
@@ -35,25 +41,13 @@ $(document).ready(function() {
     // console.log(evenTr);
 
     evenTr.each(function(index) {
-        // console.log($(this).html());
+        console.log($(this).html());
         this.title = `Current Index ${index}`;
     })
 
     // let attrVal = customersDiv.attr('class');
     // console.log(attrVal);
 
-    let attrVal = customersDiv.attr('class', 'newclass wow');
-    console.log(attrVal);
-
-
-
-
-
-
-
-
-
-
-
-
+    // let attrVal = customersDiv.attr('class', 'newclass wow');
+    // console.log(attrVal);
 });

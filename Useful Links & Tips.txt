@@ -1,0 +1,82 @@
+=========== Links ===========
+
+https://try.github.io/
+
+https://isobar-us.github.io/code-standards/
+
+https://www.wpkube.com/html5-cheat-sheet/
+
+http://getify.github.io/coercions-grid/
+
+http://jsrocks.org/
+
+http://es6-features.org/#BlockScopedVariables
+
+https://placeholder.com/
+
+https://sonarwhal.com/
+
+http://validator.w3.org/
+
+https://en.wikipedia.org/wiki/Facebook_Graph_Search
+
+https://builtwith.com/
+
+https://gsnedders.html5.org/outliner/
+
+https://www.kapwing.com/evolution-of-products
+
+https://flexboxfroggy.com/
+
+http://html5gallery.com/
+
+http://www.csszengarden.com/
+
+https://flukeout.github.io/ - Css diner
+
+https://caniuse.com/ - Can i use
+
+https://www.sitepoint.com/optimization-auditing-a-deep-dive-into-chromes-dev-console/
+
+https://medium.com/tech-tajawal/modern-frontend-developer-in-2018-4c2072fa2b9c
+
+https://codeburst.io/the-2018-web-developer-roadmap-826b1b806e8d
+ 
+https://www.hackerrank.com/
+
+https://x-team.com/
+
+http://fontastic.me/
+
+https://medium.com/
+
+http://www.muscula.com/
+
+https://errorception.com/
+
+https://logrocket.com/
+
+https://jsonplaceholder.typicode.com/
+
+https://hacks.mozilla.org/
+
+https://github.com/getify/You-Dont-Know-JS
+
+https://www.udemy.com/user/maximilian-schwarzmuller/
+
+
+=========== Tips ===========
+
+Iso formatit time wera umjobesia
+
+Sasurvelia nebismieri gverdi dalinkuli iyos sxva romelime gverdze mainc
+
+Regular expression
+
+Important unda gamoviyenot roca print gverds vaketebt
+
+Delegatebi
+
+Big and little int
+
+Shadowing a getter
