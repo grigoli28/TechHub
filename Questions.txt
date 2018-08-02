@@ -1,5 +1,5 @@
 ======== 1 =========
-What's difference with and without constructor Dog?
+^What's difference with and without constructor Dog?
 function Animal() {
     this.name = 'Animal';
     this.eats = true;
@@ -15,3 +15,18 @@ let dog = new Dog();
 console.log(dog.constructor);
 
 ========= 2 ==========
+^What does third line do?
+function _keys(obj) {
+    if (!isObject(obj)) return [];
+    if (Object.keys) return Object.keys(obj);
+    let keys = [];
+    for (let key in obj)
+        if (_.has(obj, key)) keys.push(key);
+    return keys;
+}
+
+function isObject(obj) {
+    let type = typeof obj;
+    return type === 'function' || type === 'object' && !!obj;
+}
+console.log(_keys({ red: "#FF0000", green: "#00FF00", white: "#FFFFFF" })); 
