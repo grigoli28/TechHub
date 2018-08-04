@@ -9,12 +9,13 @@
 
 
 
-// const container = document.querySelector('.container');
-// const contentBox = document.querySelector('.content_box');
-// const pElement = document.querySelector('p');
+const container = document.querySelector('.container');
+const contentBox = document.querySelector('.content_box');
+const pElement = document.querySelector('p');
 
 
-/* container.addEventListener('click', function click(event) {
+/* 
+container.addEventListener('click', function click(event) {
     console.log("Container Div");
 }, false);
 
@@ -25,35 +26,36 @@ contentBox.addEventListener('click', function click(event) {
 pElement.addEventListener('click', function click(event) {
     console.log("P Tag");
     event.stopPropagation();
-    // event.stopImmediatePropagation();
+    event.stopImmediatePropagation();
 }, false);
 
 pElement.addEventListener('click', function click2(event) {
-    console.log("P Tag2");
-}, false); */
-
+    console.log("P click2");
+}, false); 
+*/
 
 
 
 
 /* Event Creation Example 
-const myEvent = document.createEvent('CustomEvent');
+const myEvent = document.createEvent('customevent');
+
+const myCustomEventData = {
+    name: 'myCustomEvent',
+    id: 2018
+};
+
+myEvent.initCustomEvent('myCustomEvent', true, false, myCustomEventData);
 
 pElement.addEventListener('myCustomEvent', (event) => { // !important
-    console.log(event)
+    console.log(event);
 });
-
 
 contentBox.addEventListener('myCustomEvent', (event) => {
     console.log(event.detail);
 }, false);
 
 
-const myCustomEventData = {
-    name: 'myCustomEvent',
-    id: 2018
-}
-myEvent.initCustomEvent('myCustomEvent', true, false, myCustomEventData);
 pElement.dispatchEvent(myEvent);
 */
 
@@ -66,3 +68,27 @@ pElement.dispatchEvent(myEvent);
 //         console.log(target.textContent);
 //     }
 // });
+
+
+
+
+
+/* 
+let myEvent = new CustomEvent('myCustomEvent', {
+    detail: {
+        name: 'Custom Event',
+        id: 1
+    },
+    bubbles: true,
+    cancelable: false
+});
+
+pElement.addEventListener('click', (event) => {
+    console.log(event);
+    pElement.dispatchEvent(myEvent);
+})
+
+pElement.addEventListener('myCustomEvent', (event) => {
+    console.log(event);
+})
+*/

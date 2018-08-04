@@ -1,20 +1,4 @@
-======== 1 =========
-^What's difference with and without constructor Dog?
-function Animal() {
-    this.name = 'Animal';
-    this.eats = true;
-}
-
-function Dog() {
-    this.barks = true;
-}
-
-Dog.prototype = new Animal();
-Dog.prototype.constructor = Dog;
-let dog = new Dog();
-console.log(dog.constructor);
-
-========= 2 ==========
+========= 1 =========
 ^What does third line do?
 function _keys(obj) {
     if (!isObject(obj)) return [];
@@ -30,3 +14,13 @@ function isObject(obj) {
     return type === 'function' || type === 'object' && !!obj;
 }
 console.log(_keys({ red: "#FF0000", green: "#00FF00", white: "#FFFFFF" })); 
+
+
+========= 2 =========
+(function(){})() VS (function(){}())
+
+
+
+========= 3 =========
+createEvent is deprecated?
+.delegate() is deprecated?

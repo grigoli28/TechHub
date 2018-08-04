@@ -11,6 +11,10 @@
 // Promise.all(iterables)
 // Promise.race(iterables)
 
+
+
+
+ 
 /*  
 function hello(target) { // !important
     console.log('Attr Handler', target);
@@ -187,8 +191,7 @@ window.addEventListener('click', (event) => {
 
 
 
-/*  */
-
+/*  
 function doAsync() {
     let p = new Promise(function(resolve, reject) {
         console.log('In promise code');
@@ -220,3 +223,4 @@ doAsync().then(function() {
 }).catch(function(error) {
     console.log('Rejected', error.message);
 });
+*/

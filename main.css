@@ -1,13 +1,11 @@
 :root {
     --green: #1abc9c;
     --blue: #00a8ff;
-    --light-purple: #BA68C8;
-    --light-blue-tint: #e0f7fa;
     --blue-tint: #e0e0e0;
     --darker-blue: #34495e;
     --darkest-blue: #34383c;
     --light-grey: #e8e8e8;
-    --months-count: 3;
+    --months-count: 4;
 }
 
 html,
@@ -17,10 +15,6 @@ html,
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-body {
-    scroll-behavior: smooth;
 }
 
 header {
@@ -144,33 +138,17 @@ nav {
     transition: all .5s linear;
 }
 
-.main-nav__link:hover {
-    color: white;
-}
-
-.main-nav__link--first {
-    color: var(--green);
-    border-right: 0;
-}
-
-.main-nav__link--first:hover {
-    background-color: var(--green);
-}
-
-.main-nav__link--second {
+.main-nav__link {
     color: var(--blue);
 }
 
-.main-nav__link--second:hover {
+.main-nav__link:hover {
+    color: white;
     background-color: var(--blue);
 }
 
-.main-nav__link--third {
-    color: var(--light-purple);
-}
-
-.main-nav__link--third:hover {
-    background-color: var(--light-purple);
+.main-nav__link--first {
+    border-right: 0;
 }
 
 
@@ -181,6 +159,7 @@ nav {
     margin-bottom: 50px;
     display: grid;
     grid-template-areas:
+        "space space august august august free free"
         "july july july center-col july1 july1 july1"
         "july2 july2 july2 center-col july3 july3 july3"
         "june june june center-col june1 june1 june1"
@@ -237,6 +216,10 @@ nav {
     grid-area: july3;
 }
 
+.august {
+    grid-area: august;
+}
+
 .homework {
     margin-top: 50px;
     background-color: var(--light-grey);
@@ -258,7 +241,7 @@ nav {
 }
 
 .homework--june {
-    color: var(--blue);
+    color: var(--green);
 }
 
 .homework--may:hover {
@@ -268,16 +251,25 @@ nav {
 
 .homework--june:hover {
     color: white;
-    background-color: var(--blue);
+    background-color: var(--green);
 }
 
 .homework--july {
-    color: var(--light-purple);
+    color: var(--green);
 }
 
 .homework--july:hover {
     color: white;
-    background-color: var(--light-purple);
+    background-color: var(--green);
+}
+
+.homework--august {
+    color: var(--green);
+}
+
+.homework--august:hover {
+    color: white;
+    background-color: var(--green);
 }
 
 .homework__date {

@@ -17,19 +17,18 @@
 
 
 $(document).ready(function() {
+
     $('#loadBtn').click(function() {
-        // $('#myDiv').load('template.html #small'); // !important
+        // // $('#myDiv').load('template.html #small'); // !important
         // $('#myDiv').load('template.html', function(response, status, xhr) {
-        // xhr object is instance of XMLHttpRequest() !important
-
-        // if (status === 'error'){
-        //     alert('Not Found');
-        // }
-        // console.log(response);
-        // console.log(status);
-        // console.log(xhr);
+        //     // xhr object is instance of XMLHttpRequest() !important
+        //     if (status === 'error') {
+        //         alert('Not Found');
+        //     }
+        //     console.log(response);
+        //     console.log(status);
+        //     console.log(xhr.status);
         // });
-
 
 
         // let request;
@@ -44,6 +43,7 @@ $(document).ready(function() {
 
         // request.onreadystatechange = function() {
         //     if (request.readyState == XMLHttpRequest.DONE) {
+        //         myDiv.innerHTML = request.responseText;
         //         console.log(request.responseText);
         //     } else {
         //         console.log('Request  - ', request.readyState);
@@ -74,13 +74,9 @@ $(document).ready(function() {
 
 
 
-
-
-        let url = 'https://jsonplaceholder.typicode.com/users';
-
+        // let url = 'https://jsonplaceholder.typicode.com/users';
 
         // $.get(url, function(data) {
-        //     console.log(data);
         //     $('#myDiv').append(
         //         data.map((el) => {
         //             return `<h1>${el.name}</h1>`;
@@ -92,28 +88,38 @@ $(document).ready(function() {
 
         // $.getJSON(url, function(data) {
         //     console.log(data);
+        //     $('#myDiv').append(
+        //         data.map((el) => {
+        //             return `<h1>${el.name}</h1>`;
+        //         }).join('')
+        //     );
         // });
 
 
 
-        // Ajax Calls = .load(), .get(), .getJSON(), .post(), .ajax()
+        // Ajax Calls = .load(), .get(), .getJSON(), .post(), .ajax() // !Important
         // Supported Ajax Data types : JSON, XML, XHTML
-        $.ajax({
-            url,
-            data: null,
-            method: 'get',
-            dataType: 'json',
-            success(data, status, xhr) {
-                console.log(data);
-                $('#myDiv').append(
-                    data.map((el) => {
-                        return `<h1>${el.name}</h1>`;
-                    }).join('')
-                );
-            },
-            error(xhr, status, error) {
-                console.log(error);
-            }
-        });
+        // $.ajax({
+        //     url,
+        //     data: null,
+        //     method: 'get',
+        //     dataType: 'json',
+        //     success(data, status, xhr) {
+        //         console.log(data);
+        //         $('#myDiv').append(
+        //             data.map((el) => {
+        //                 return `<h1>${el.name}</h1>`;
+        //             }).join('')
+        //         );
+        //     },
+        //     error(xhr, status, error) {
+        //         console.log(error);
+        //     }
+        // });
+
+
+
+
+
     });
 });

@@ -27,7 +27,7 @@ let myModule = (function() {
 }());
 
 myModule.publicMethod();
-// console.log(myModule._privateVar); // Can not get this variable
+console.log(myModule._privateVar); // Can not get this variable
 myModule._privateMethod();
 */
 
@@ -36,7 +36,7 @@ myModule._privateMethod();
 
 
 
-/*  Module Revealing Pattern */
+/*  Module Revealing Pattern 
 let myModule = (function() {
     let _privateVar = 'Hello World from a Module';
     let publicProperty = 'This is a public property';
@@ -57,3 +57,4 @@ let myModule = (function() {
 
 myModule.publicMethod();
 console.log(myModule.publicProperty);
+*/

@@ -64,6 +64,17 @@ https://github.com/getify/You-Dont-Know-JS
 
 https://www.udemy.com/user/maximilian-schwarzmuller/
 
+https://devhints.io/
+
+http://www.evolutionoftheweb.com/#/evolution/day
+
+https://vscodecandothat.com/
+
+https://www.shopify.com/partners/blog/best-visual-studio-code-extensions-2017
+
+https://csswizardry.com/2018/06/image-inconsistencies-how-and-when-browsers-download-images/
+
+https://blog.codeanalogies.com/ !!!Very Useful
 
 =========== Tips ===========
 

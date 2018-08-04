@@ -1,6 +1,5 @@
 // REST API
 // GET POST PUT PATCH DELETE
-// CORSE
 // .json()
 // .join('')
 // Promise.all
@@ -8,42 +7,84 @@
 // ASYNC Functions
 
 
-/*  
-window.onload = () => {
 
-    let usersEndPoint = 'https://jsonplaceholder.typicode.com/users';
+let usersEndPoint = 'https://jsonplaceholder.typicode.com/users';
 
 
-    
-    fetch(usersEndPoint, {
-            method: 'get'
-        })
-        .then(response => {
-            // console.log(response);
-            if (response.status === 200) {
-                // console.log('Successul');
-                return response.json();
-            }
-        })
-        .then(usersList => {
-            console.log(usersList);
-            document.body.innerHTML = usersList.map(user => {
-                return `<div>
+fetch(usersEndPoint, {
+        method: 'get'
+    })
+    .then(response => {
+        // console.log(response);
+        if (response.status === 200) {
+            // console.log('Successul');
+            return response.json();
+        }
+    })
+    .then(usersList => {
+        console.log(usersList);
+        document.body.innerHTML = usersList.map(user => {
+            return `<div>
                             <big>${user.name}, <strong> Id : ${user.id}</strong></big>
                         </div>`
-            }).join('');
+        }).join('');
+    })
+    .catch(error => {
+        console.log(`Error : ${error.message}`);
+    });
+
+
+
+
+
+
+/* 
+fetch(usersEndPoint, {
+        method: 'get'
+    })
+    .then(response => {
+        // console.log(response);
+        if (response.status === 200) {
+            // console.log('Successul');
+            return response.json();
+        }
+    })
+    .then(usersList => {
+        // console.log(usersList);
+        document.body.innerHTML = usersList.map(user => {
+            return `<div  data-user-id="${user.id}">
+                    <strong>${user.name}, <small> Id : ${user.id}</small></strong>
+                    </div>`
+        }).join('');
+        let users = document.querySelectorAll('[data-user-id]');
+        users.forEach(user => {
+            user.addEventListener('click', event => {
+                // console.log('I am an event', event.target);
+                let userDiv = event.target;
+                // DIV
+                if (userDiv.tagName.toLowerCase() != 'div') {
+                    while (userDiv.tagName.toLowerCase() != 'div') {
+                        userDiv = userDiv.parentNode;
+                    }
+                }
+                // DIV Element[data-user-id]
+                console.log(userDiv.dataset.userId);
+                let userId = user.dataset.userId;
+                showDetailsById(userId);
+            }, false)
         })
-        .catch(error => {
-            console.log(`Error : ${error.message}`);
-        });
-    */
+        console.log(users)
+    })
+    .catch(error => {
+        console.log(`Error : ${error.message}`);
+    });
 
 
 
 
-
-/*  
-    fetch(usersEndPoint, {
+function showDetailsById(userId) {
+    // console.log(`${usersEndPoint}/${userId}`);
+    fetch(`${usersEndPoint}/${userId}`, {
             method: 'get'
         })
         .then(response => {
@@ -53,52 +94,8 @@ window.onload = () => {
                 return response.json();
             }
         })
-        .then(usersList => {
-            // console.log(usersList);
-            document.body.innerHTML = usersList.map(user => {
-                return `<div  data-user-id="${user.id}">
-                    <strong>${user.name}, <small> Id : ${user.id}</small></strong>
-                    </div>`
-            }).join('');
-            let users = document.querySelectorAll('[data-user-id]');
-            users.forEach(user => {
-                user.addEventListener('click', event => {
-                    // console.log('I am an event', event.target);
-                    let userDiv = event.target;
-                    // DIV
-                    if (userDiv.tagName.toLowerCase() != 'div') {
-                        while (userDiv.tagName.toLowerCase() != 'div') {
-                            userDiv = userDiv.parentNode;
-                        }
-                    }
-                    // DIV Element[data-user-id]
-                    console.log(userDiv.dataset.userId);
-                    let userId = user.dataset.userId;
-                    showDetailsById(userId);
-                }, false)
-            })
-            console.log(users)
-        })
-        .catch(error => {
-            console.log(`Error : ${error.message}`);
-        });
-
-
-
-    function showDetailsById(userId) {
-        // console.log(`${usersEndPoint}/${userId}`);
-        fetch(`${usersEndPoint}/${userId}`, {
-                method: 'get'
-            })
-            .then(response => {
-                // console.log(response);
-                if (response.status === 200) {
-                    // console.log('Successul');
-                    return response.json();
-                }
-            })
-            .then(userDetail => {
-                document.body.innerHTML = `
+        .then(userDetail => {
+            document.body.innerHTML = `
                 <div class="user__detail--item">
                     <h2>${userDetail.name}</h2>
                     <h3>Phone : ${userDetail.phone}</h3>
@@ -106,13 +103,13 @@ window.onload = () => {
                     <h3>Email : ${userDetail.email}</h3>
                 </div>
             `;
-            })
-            .catch(error => {
-                console.log(`Error : ${error.message}`);
-            });
-    }
-    
-}*/
+        })
+        .catch(error => {
+            console.log(`Error : ${error.message}`);
+        });
+}
+*/
+
 
 
 
@@ -205,7 +202,7 @@ window.onload = () => {
 
 
 
-/* ASYNC Functions*/
+/* ASYNC Functions
 
 
 // Rewrite following code with async functions !important
@@ -295,3 +292,4 @@ async function funcPromiseAll() {
 
 
 funcPromiseAll();
+*/
