@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .show {
+            display: initial !important;
+        }
+        
+        img {
+            display: none;
+            max-width: 400px;
+            max-height: 400px;
+        }
+        
+        #result {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="">
+            <h3>Save Your Info</h3>
+            <div class="col col1">
+                <p>Name</p>
+                <input id="name" type="text">
+                <p>Surname</p>
+                <input id="surname" type="text">
+                <p>Age</p>
+                <input id="age" type="text">
+            </div>
+            <button id="save">Save</button>
+            <button id="show">Show Info</button>
+        </div>
+        <div id="result">
+            <div class="result__item">
+                <p>Name</p>
+                <b id="prName"></b>
+            </div>
+            <div class="result__item">
+                <p>Surname</p>
+                <b id="prSurname"></b>
+            </div>
+            <div class="result__item">
+                <p>Age</p>
+                <b id="prAge"></b>
+            </div>
+        </div>
+    </div>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/yourInfo.js"></script>
+</body>
+
+</html>

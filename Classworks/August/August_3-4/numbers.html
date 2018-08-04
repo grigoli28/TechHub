@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Numbers</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .number {
+            display: inline-block;
+            padding: 5px;
+            margin: 1px;
+            border-radius: 8px;
+            background-color: lightgrey;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>#Numbers</h2>
+        <div id="numbers">
+        </div>
+        <div class="buttons" style="margin: 10px 0;">
+            <button id="shuffle">Shuffle Numbers</button>
+            <button id="ascending">By Ascending</button>
+            <button id="descending">By Descending</button>
+        </div>
+    </div>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/numbers.js"></script>
+</body>
+
+</html>

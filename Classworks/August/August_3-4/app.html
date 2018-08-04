@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <title>App</title>
+    <style>
+        body {
+            font-family: Raleway
+        }
+        
+        #peopleModule {
+            padding: 0;
+        }
+        
+        #peopleModule li {
+            display: inline-block;
+            list-style-type: none;
+            background-color: seagreen;
+            border-radius: 5px;
+            padding: 6px;
+            margin: 5px;
+            width: 200px;
+            cursor: pointer;
+            color: white;
+            font-weight: bolder;
+            opacity: .85;
+            transition: opacity .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        
+        #peopleModule li span {
+            display: inline-block;
+            width: 160px;
+        }
+        
+        #peopleModule li i {
+            cursor: pointer;
+            font-weight: bold;
+            background-color: red;
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="peopleModule">
+        <h1>People</h1>
+        <input placeholder="name" type="text">
+        <button id="addPerson">Add Person</button>
+        <ul id="people">
+        </ul>
+    </div>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
