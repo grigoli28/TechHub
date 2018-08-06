@@ -14,23 +14,20 @@ for (let i = 1; i < numberCount; i++) {
 
 printNumbers(numberDiv, numbersArr);
 
-
 numberDiv.addEventListener('click', function removeNum({ target }) {
     if (target.nodeName.toLowerCase() == 'span') {
         let index = numbersArr.indexOf(Number(target.textContent));
         numbersArr.splice(index, 1);
         target.remove();
     }
-})
+});
 
 
 shuffle.addEventListener('click', function shuffle() {
     for (let i = 0; i < numbersArr.length; i++) {
         let rand1 = Math.floor(Math.random() * numbersArr.length);
         let rand2 = Math.floor(Math.random() * numbersArr.length);
-        numbersArr.splice(rand2, 1,
-            numbersArr.splice(rand1, 1, numbersArr[rand2])[0]
-        );
+        [numbersArr[rand1], numbersArr[rand2]] = [numbersArr[rand2], numbersArr[rand1]]
     }
     updateNumbers(numberDiv, numbersArr);
 });

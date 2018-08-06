@@ -1,5 +1,5 @@
-self.addEventListener('message', function(event) {
-    fetch(event.data, {
+self.addEventListener('message', function(message) {
+    fetch(message.data, {
         method: 'get'
     }).then(response => {
         if (response.status === 200) {
@@ -7,5 +7,6 @@ self.addEventListener('message', function(event) {
         }
     }).then(users => {
         self.postMessage(users);
+        self.close();
     })
 })

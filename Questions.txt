@@ -1,0 +1,4 @@
+========== 1 ==========
+Why does localStorage.setItem(str, str) does not rewrite properly?
+ex: localStorage.setItem('5', 'true')
+storage doesnt work with numbers as keys!!!
