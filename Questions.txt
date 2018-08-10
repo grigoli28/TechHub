@@ -1,8 +1,3 @@
-========== 1 ==========
-Why does localStorage.setItem(str, str) does not rewrite properly?
-ex: localStorage.setItem('5', 'true')
-storage doesnt work with numbers as keys!!!
-
 ========== 2 ==========
 /(?:foo){1,2}/ VS /(foo){1,2}/
 /ab*\d/ VS /ab*(\d)/

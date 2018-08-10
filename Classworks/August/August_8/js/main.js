@@ -58,6 +58,7 @@ let PubSub = (function() {
             }
             let index = events[event].queue.push(callback) - 1;
             return (function() {
+                console.log(events)
                 return {
                     remove() {
                         delete events[event].queue[index];
