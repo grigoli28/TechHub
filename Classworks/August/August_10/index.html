@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS 101</title>
+</head>
+
+<body>
+    <button id="doLazy">Do</button>
+    <button id="colorize">Colorize</button>
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+        let worker = new Worker('js/worker.js');
+        worker.addEventListener('message', function(e) {
+            console.log(e.data);
+        });
+
+        /*
+        worker.postMessage({
+            type: 'add',
+            nums: [3, 5]
+        });
+
+        worker.postMessage({
+            type: 'sub',
+            nums: [8, 2]
+        });
+
+        doLazy.addEventListener('click', function(e) {
+            worker.postMessage({
+                type: 'doLazy'
+            })
+        })
+
+        colorize.addEventListener('click', () => {
+            document.body.style.backgroundColor = 'seagreen';
+        })
+        */
+
+
+
+
+
+        function add(a, b) {
+            if (!parseFloat(a) || !parseFloat(b)) {
+                throw 'numeric inputs allowed';
+            }
+            return a + b;
+        }
+
+        function sub(a, b) {
+            if (!parseFloat(a) || !parseFloat(b)) {
+                throw 'numeric inputs allowed';
+            }
+            return a - b;
+        }
+
+        let sum = new Function('a', 'b', 'return a + b');
+
+        doLazy.addEventListener('click', function(e) {
+            document.write(sum(10, 13));
+        });
+
+
+        let regExp = /\((.*)\).*\{([\s\S]*)\}/m;
+        let addParts = regExp.exec(add.toString());
+        console.log(addParts);
+
+        worker.postMessage({
+            type: 'registerFunction',
+            name: 'add',
+            parameters: addParts[1],
+            body: addParts[2],
+        })
+    </script>
+</body>
+
+</html>
