@@ -13,12 +13,16 @@
     <button id="colorize">Colorize</button>
     <!-- <script src="js/main.js"></script> -->
     <script>
+        // Web Workers
+        // worker.postmessage()
         let worker = new Worker('js/worker.js');
+
+        /*
         worker.addEventListener('message', function(e) {
             console.log(e.data);
         });
 
-        /*
+        
         worker.postMessage({
             type: 'add',
             nums: [3, 5]
@@ -42,7 +46,8 @@
 
 
 
-
+        let nextProcessId = 1;
+        let callbacks = {};
 
         function add(a, b) {
             if (!parseFloat(a) || !parseFloat(b)) {
@@ -52,29 +57,47 @@
         }
 
         function sub(a, b) {
-            if (!parseFloat(a) || !parseFloat(b)) {
-                throw 'numeric inputs allowed';
-            }
             return a - b;
         }
 
         let sum = new Function('a', 'b', 'return a + b');
 
-        doLazy.addEventListener('click', function(e) {
-            document.write(sum(10, 13));
+        worker.addEventListener('message', function(e) {
+            if (callbacks[e.data.processId]) {
+                callbacks[e.data.processId](e.data.result);
+                delete callbacks[e.data.processId];
+            }
         });
 
 
         let regExp = /\((.*)\).*\{([\s\S]*)\}/m;
         let addParts = regExp.exec(add.toString());
-        console.log(addParts);
 
         worker.postMessage({
             type: 'registerFunction',
             name: 'add',
             parameters: addParts[1],
             body: addParts[2],
-        })
+        });
+
+
+        let msg = {
+            type: 'add',
+            nums: [1, 2],
+            processId: nextProcessId++
+        };
+
+        callbacks[msg.processId] = (function(msg) {
+            return function(result) {
+                if (result.isError) {
+                    console.log('Something Went Wrong')
+                } else {
+                    console.log('The Result of adding', msg.nums, 'is', result.value);
+                }
+            };
+        })(msg);
+
+        worker.postMessage(msg);
     </script>
 </body>
 
