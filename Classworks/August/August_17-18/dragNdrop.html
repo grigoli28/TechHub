@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag N Drop</title>
+    <style>
+        [data-role="drag-drop-target"] {
+            float: left;
+            width: 500px;
+            height: 280px;
+            margin: 10px;
+            padding: 10px;
+            border: 3px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        .over {
+            background-color: #ffc;
+        }
+        
+        [draggable="true"] {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .drag {
+            opacity: 0.25;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="source__container" data-role="drag-drop-target">
+        <img src="Big_Butt_Bunny.PNG" alt="" draggable="true" id="snapshot">
+    </div>
+    <div id="source__container_2" data-role="drag-drop-target">
+            <img src="Big_Butt_Bunny.PNG" alt="" draggable="true" id="snapshot_2">
+        </div>
+    <div id="target__container" data-role="drag-drop-target"></div>
+    <script src="js/dragNdrop2.js"></script>
+</body>
+
+</html>

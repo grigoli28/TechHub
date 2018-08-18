@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <video width="640" height="360" muted controls poster="Big_Butt_Bunny.PNG" preload="auto"> -->
+    <video id="vid" poster="Big_Butt_Bunny.PNG">
+        <source src="big_buck_bunny.mp4">
+        <!-- <source src="big_buck_bunny.ogg">
+        <source src="big_buck_bunny.webm"> -->
+        Buy New PC!!!
+    </video>
+
+
+    <div>
+        <input type="range" id="scrubber" min="0" max="60" value="0" step="1">
+        <span id="remainingTime">0:00</span> /
+        <span id="totalTime">0:00</span>
+    </div>
+    <div>
+        <button id="playPause">Play</button>
+        <span>|</span>
+        <button id="begin">&lt;&lt;</button>
+        <button id="rewind">&lt;</button>
+        <button id="fastForward">&gt;</button>
+        <button id="end">&gt;&gt;</button>
+        <span>|</span>
+        <button id="stop">Stop</button>
+    </div>
+
+    <div>
+        <input type="range" id="volume" min="0" max="1" value="0" step="0.1" title="Volume">
+        <button id="mute">Mute</button>
+    </div>
+
+    <div>
+        <span>Speed</span>
+        <input type="range" id="playbackRate" min="1" max="4" value="1" step="0.5" title="Playback Speed">
+    </div>
+
+
+    <script src="js/player.js"></script>
+</body>
+
+
+
+</html>

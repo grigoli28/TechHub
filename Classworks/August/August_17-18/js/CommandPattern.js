@@ -42,4 +42,4 @@ const myNum = new Command(new SpecialMath(9));
 console.log(myNum.execute('square'));
 console.log(myNum.execute('cube'));
 console.log(myNum.execute('sqRoot'));
-console.log(myNum.commandsExecute);
+console.log(myNum.executedCommands);
