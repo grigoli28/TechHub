@@ -1,7 +1,16 @@
-// video.addEventListener('load')
+// video events : load, canplay, play
 // video.play();
 // video.pause();
 // video.currentTime
+// video.paused
+// video.ended
+// video.playbackRate
+// video.duration
+// video.volume
+
+
+
+
 
 
 
@@ -110,14 +119,14 @@ video.addEventListener('timeupdate', function() {
 
 
 mute.addEventListener('click', function() {
-    if (!mute.muted) {
+    if (!video.muted) {
         vol = volume.value;
     }
     video.muted = !video.muted;
     if (video.muted) {
         mute.innerText = 'Unmute';
     } else {
-        video.value = vol;
+        volume.value = vol;
         mute.innerText = 'Mute';
     }
 }, false);

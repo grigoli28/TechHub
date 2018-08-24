@@ -5,13 +5,14 @@ function dragStart(event) {
     try {
         event.dataTransfer.setData('text/plain', event.target.id);
     } catch (err) {
+        // for Internet Explorer
         event.dataTransfer.setData('text', event.target.id);
     }
     souceContainerId = this.parentElement.id;
 }
 
 
-function cancel(event) {
+function cancel(event) { // !important
     if (event.preventDefault()) {
         event.preventDefault();
     }
@@ -39,6 +40,7 @@ function dropped(event) {
 
 
 let targets = document.querySelectorAll('[data-role="drag-drop-target"]');
+console.log(targets);
 
 
 [].forEach.call(targets, function(target) {

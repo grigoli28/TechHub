@@ -1,9 +1,8 @@
-// event.dataTransfer.estData('text/plain', event.target.id)
-// event.dataTransfer.estData('text', event.target.id)
+// event.dataTransfer.setData('text/plain', event.target.id)
+// event.dataTransfer.setData('text', event.target.id)
 
 
 let img = document.getElementById('snapshot');
-
 
 
 function dragStart(event) {
@@ -17,14 +16,12 @@ function dragStart(event) {
 img.addEventListener('dragstart', dragStart, false);
 
 
-
 function dropped(event) {
     let id;
     cancel(event);
-    try{
+    try {
         id = event.dataTransfer.getData('text/plain');
-    }
-    catch(err) {
+    } catch (err) {
         id = event.dataTransfer.getData('text');
     }
 
