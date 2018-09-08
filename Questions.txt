@@ -27,3 +27,7 @@ let carManager = (function() {
 carManager.execute = function ( name ) {
   ??????  return carManager[name] && carManager[name].apply( carManager, [].slice.call(arguments, 1) );
 };
+
+
+*****************************
+What are the benefits of using custom created elements????
