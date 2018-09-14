@@ -1,0 +1,16 @@
+{
+  "name": "display-time",
+  "version": "1.0.0",
+  "description": "\"My First Project\"",
+  "main": "index.js",
+  "dependencies": {
+    "upper-case": "^1.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .\\js\\app.js"
+  },
+  "author": "\"Grigol Tchkoidze\"",
+  "license": "MIT"
+}
