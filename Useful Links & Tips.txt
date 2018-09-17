@@ -82,6 +82,8 @@ https://www.regular-expressions.info/refrepeat.html
 
 https://regex101.com/
 
+https://modernizr.com/
+
 =========== Tips ===========
 
 Iso formatit time wera umjobesia
