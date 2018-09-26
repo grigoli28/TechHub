@@ -69,7 +69,7 @@ window.onload = () => {
 
     ctx.beginPath();
     let gradient = ctx.createRadialGradient(centerX, centerY / 1.2, 80, 100, 50, 40);
-    gradient.addColorStop(0, 'black=');
+    gradient.addColorStop(0, 'black');
     gradient.addColorStop(1, 'red');
 
     ctx.fillStyle = gradient;
