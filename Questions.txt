@@ -1,4 +1,8 @@
 ******************************
+Express doesn't search for all files in views
+
+
+******************************
 /(?:foo){1,2}/ VS /(foo){1,2}/
 
 ******************************
@@ -7,7 +11,6 @@ FreeCodeCamp: {
     3rd from Last,
     Lookaheads
 }
-
 
 ******************************
 let carManager = (function() {
@@ -27,7 +30,3 @@ let carManager = (function() {
 carManager.execute = function ( name ) {
   ??????  return carManager[name] && carManager[name].apply( carManager, [].slice.call(arguments, 1) );
 };
-
-
-*****************************
-What are the benefits of using custom created elements????
