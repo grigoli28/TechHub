@@ -84,15 +84,15 @@ ul {
     padding-top: 5px;
 }
 
-.proj-link-1 {
+.proj-link {
     display: inline-block;
     color: #fff;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.proj-link-1:hover {
-    text-shadow: 0 0 3px var(--light-grey);
+.proj-link:hover {
+    text-shadow: 1px 1px 3px white;
 }
 
 .git-link {
@@ -158,43 +158,64 @@ nav {
     margin: 0 auto;
     margin-bottom: 50px;
     display: grid;
-    grid-template-areas:
-        "august august august center-col august1 august1 august1"
-        "july july july center-col july1 july1 july1"
-        "july2 july2 july2 center-col july3 july3 july3"
-        "june june june center-col june1 june1 june1"
-        "june2 june2 june2 center-col june3 june3 june3"
-        "may1 may1 may1 center-col may2 may2 may2"
-        "may3 may3 may3 center-col may4 may4 may4";
+    grid-template-areas: "august august august center-col august1 august1 august1" "july july july center-col july1 july1 july1" "july2 july2 july2 center-col july3 july3 july3" "june june june center-col june1 june1 june1" "june2 june2 june2 center-col june3 june3 june3" "may1 may1 may1 center-col may2 may2 may2" "may3 may3 may3 center-col may4 may4 may4";
 }
 
-.may1 { grid-area: may1; }
- 
-.may2 { grid-area: may2; }
- 
-.may3 { grid-area: may3; }
- 
-.may4 { grid-area: may4; }
- 
-.june { grid-area: june; }
+.may1 {
+    grid-area: may1;
+}
 
-.june1 { grid-area: june1; }
- 
-.june2 { grid-area: june2; }
- 
-.june3 { grid-area: june3; }
+.may2 {
+    grid-area: may2;
+}
 
-.july { grid-area: july; }
+.may3 {
+    grid-area: may3;
+}
 
-.july1 { grid-area: july1; }
- 
-.july2 { grid-area: july2; }
- 
-.july3 { grid-area: july3; }
+.may4 {
+    grid-area: may4;
+}
 
-.august { grid-area: august; }
+.june {
+    grid-area: june;
+}
 
-.august1 { grid-area: august1; }
+.june1 {
+    grid-area: june1;
+}
+
+.june2 {
+    grid-area: june2;
+}
+
+.june3 {
+    grid-area: june3;
+}
+
+.july {
+    grid-area: july;
+}
+
+.july1 {
+    grid-area: july1;
+}
+
+.july2 {
+    grid-area: july2;
+}
+
+.july3 {
+    grid-area: july3;
+}
+
+.august {
+    grid-area: august;
+}
+
+.august1 {
+    grid-area: august1;
+}
 
 .homework {
     margin-top: 50px;
