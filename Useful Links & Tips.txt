@@ -98,6 +98,12 @@ https://blog.usejournal.com/10-things-you-will-eventually-learn-about-javascript
 
 https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
 
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Howto
+
+https://www.youtube.com/watch?v=8LCx9Dir8BU&feature=youtu.be
+
+https://hackr.io/
+
 =========== Tips ===========
 
 Iso formatit time wera umjobesia

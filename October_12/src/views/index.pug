@@ -1,0 +1,10 @@
+doctype html
+head
+    title Color Chooser
+body(style=`background-color: ${color}`)
+    form(action="" method="post")
+        label(for="colorPick") Choose Color
+        br
+        input(type="color", name="userColor", id="colorPick")
+        br
+        button(type="submit") Send
