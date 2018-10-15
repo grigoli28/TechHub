@@ -104,6 +104,20 @@ https://www.youtube.com/watch?v=8LCx9Dir8BU&feature=youtu.be
 
 https://hackr.io/
 
+https://aws.amazon.com/cloud9/
+
+https://www.heroku.com/developers
+
+https://www.digitalocean.com/
+
+https://www.vultr.com/pricing/
+
+https://memcached.org/
+
+https://redis.io/
+
+https://tylermcginnis.com/beginners-guide-to-javascript-prototype/
+
 =========== Tips ===========
 
 Iso formatit time wera umjobesia
