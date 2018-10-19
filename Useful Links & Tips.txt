@@ -120,6 +120,10 @@ https://tylermcginnis.com/beginners-guide-to-javascript-prototype/
 
 https://medium.com/datadriveninvestor/stopping-using-console-log-and-start-using-your-browsers-debugger-62bc893d93ff
 
+http://kangax.github.io/compat-table/es6/
+
+https://browserl.ist/
+
 =========== Tips ===========
 
 Iso formatit time wera umjobesia
