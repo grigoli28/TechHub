@@ -118,6 +118,10 @@ https://redis.io/
 
 https://tylermcginnis.com/beginners-guide-to-javascript-prototype/
 
+http://kangax.github.io/compat-table/es6/
+
+https://browserl.ist/ !!!important
+
 =========== Tips ===========
 
 Iso formatit time wera umjobesia
