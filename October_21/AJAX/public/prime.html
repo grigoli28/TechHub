@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AJAX Demo - Calculator</title>
+  <style>
+    .lds-ellipsis {
+      display: inline-block;
+      position: relative;
+      width: 64px;
+      height: 64px;
+    }
+    .lds-ellipsis div {
+      position: absolute;
+      top: 27px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: rgb(68, 243, 255);
+      animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
+    .lds-ellipsis div:nth-child(1) {
+      left: 6px;
+      animation: lds-ellipsis1 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(2) {
+      left: 6px;
+      animation: lds-ellipsis2 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(3) {
+      left: 26px;
+      animation: lds-ellipsis2 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(4) {
+      left: 45px;
+      animation: lds-ellipsis3 0.6s infinite;
+    }
+    @keyframes lds-ellipsis1 {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes lds-ellipsis3 {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+    @keyframes lds-ellipsis2 {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(19px, 0);
+      }
+    }
+    .loader--show {
+        display: block;
+    }
+    .loader--hide {
+        display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <label>
+      Min: <input type="number" id="min">
+    </label>
+  </div>
+  <br>
+  <div>
+    <label>
+      Max: <input type="number" id="max">
+    </label>
+  </div>
+  <br>
+  <div>
+    <button type="button" id="addBtn">Get Count</button>
+  </div>
+  <br>
+  <span id="result"></span>
+  <div class="lds-ellipsis loader--hide" id="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+    const addBtn = document.getElementById('addBtn');
+
+    addBtn.addEventListener('click', ({ target }) => {
+      let min = document.getElementById('min').value;
+      let max = document.getElementById('max').value;
+      let loader = document.getElementById('loader');
+      loader.classList.add('loader--show');
+      loader.classList.remove('loader--hide');
+
+      let result = document.getElementById('result');
+      let url = `/add?min=${min}&max=${max}`;
+
+      fetch(url, { method: 'GET' })
+        .then(res => res.text())
+        .then(data => result.innerHTML = `Number of Primes: ${data}`)
+        .catch(err => console.error(err))
+        .finally(() => {
+          loader.classList.add('loader--hide');
+          loader.classList.remove('loader--show');
+        });
+    });
+  </script>
+</body>
+
+</html>

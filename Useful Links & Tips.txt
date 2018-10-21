@@ -124,6 +124,10 @@ http://kangax.github.io/compat-table/es6/
 
 https://browserl.ist/
 
+https://loading.io/css/
+
+https://mlab.com/
+
 =========== Tips ===========
 
 Iso formatit time wera umjobesia

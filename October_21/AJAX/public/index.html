@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX Demo - Calculator</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div>
+        <input list="brands">
+        <datalist id="brands">
+            <option value="VW">
+            <option value="Audi">
+            <option value="Skoda">
+            <option value="BMW">
+            <option value="Mercedes">
+        </datalist>
+    </div>
+    <div>
+        <label>
+      Number 1: <input type="number" id="num_1">
+    </label>
+    </div>
+    <br>
+    <div>
+        <label>
+      Number 2: <input type="number" id="num_2">
+    </label>
+    </div>
+    <br>
+    <div>
+        <button type="button" id="addBtn">+</button>
+    </div>
+    <br>
+    <span id="result"></span>
+    <div class="lds-roller loader--hide" id="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
