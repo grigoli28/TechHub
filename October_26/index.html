@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16.4.0/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16.4.0/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <style>
+        .box {
+            border: 2px double #222;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .default {
+            border: 2px solid #222;
+            padding: 15px;
+            background-color: #eee;
+        }
+        .VW {
+            background-color: turquoise;
+        }
+    </style>
+    <title>React: Get Started</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        const App = document.getElementById('app');
+        function ComponentDemo() {
+            let info = "Super Code";
+            return (
+                <React.Fragment>
+                    <h1>Hello React</h1>
+                    <h2>Hello {info}</h2>
+                </React.Fragment>
+            );
+        }
+
+        let element = <ComponentDemo/>;
+
+        function Demo(props) {
+            return (
+                <div className={props.demoClass}>
+                    <h1>Hello Box</h1>
+                    <h2>Hello {props.data}</h2>
+                </div>
+            );
+        }
+
+
+        Demo.defaultProps = {
+            demoClass: 'default', 
+            data: 'Default Properties'
+        };
+
+
+        let destruct = {
+            demoClass: 'box',
+            data:'Default Destruct Properties'
+        };
+
+        function Car(props) {
+            return (
+                <div className={props.className}>
+                    <h1>Make - {props.make}</h1>
+                    <h2>Year - {props.year}</h2>
+                </div>
+            );
+        }
+
+
+        Car.propTypes = {
+            make: PropTypes.string,
+            year: PropTypes.number,
+            className: PropTypes.string.isRequired
+        }
+
+        const cars = [
+            {make: "VW", year: 2018, className: 'box VW'},
+            {make: "Audi", year: 2019, className: 'box'},
+            {make: "Skoda", year: 2017, className: 'box'},
+            {make: "Range Rover", year: 2019, className: 'box'}
+        ];
+
+        let carsDom = cars.map((car ,index) => {
+            return (
+                <Car
+                    className={car.className}
+                    make={car.make}
+                    year={car.year}
+                    key={index}
+                />
+            );
+        });
+
+
+        let CARS = <div>{carsDom}</div>;
+
+
+        // ReactDOM.render(element, App);
+        // ReactDOM.render(<Demo demoClass="box"/>, App);
+        // ReactDOM.render(<Demo {...destruct}>, App);
+        ReactDOM.render(CARS, App);
+        
+    </script>
+</body>
+
+</html>
