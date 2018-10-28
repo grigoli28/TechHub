@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16.4.0/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16.4.0/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/create-react-class@15.6.3/create-react-class.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <title>React: Get Started</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+    
+        const rootEl = document.getElementById('app');
+
+
+        function DateFormat(props) {
+            let date = props.date;
+            let delimiter = props.delimiter;
+            let day = date.getDate();
+            let month = date.getMonth();
+            let year = date.getFullYear();
+            return (
+                <span>{day}{delimiter}{month}{delimiter}{year}</span>
+            );
+        }
+
+        DateFormat.propTypes = {
+            date: PropTypes.instanceOf(Date).isRequired
+        };
+
+        DateFormat.defaultProps = {
+            delimiter: ':'
+        };
+
+        const List = props => {
+            return <ul>{props.children}</ul>;
+        };
+          
+        const Item = props => {
+            return <li>{props.children}</li>;
+        };
+        
+        List.defaultProps = {
+            children: <Item>Empty List</Item>
+        };
+
+
+        function App() {
+            return (
+                <>
+                    <List/>
+                    <List>
+                        <Item>
+                            <DateFormat date={new Date()} delimiter="/"/>
+                        </Item>
+                        <Item>First</Item>
+                        <Item>Second</Item>
+                    </List>
+                </>
+            );
+        }
+        
+
+        ReactDOM.render(<App/>, rootEl);
+        </script>
+</body>
+
+</html>

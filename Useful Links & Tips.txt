@@ -132,6 +132,8 @@ https://developers.google.com/web/updates/2018/10/watch-video-using-picture-in-p
 
 https://flow.org/
 
+https://www.styled-components.com/
+
 =========== Tips ===========
 
 Iso formatit time wera umjobesia

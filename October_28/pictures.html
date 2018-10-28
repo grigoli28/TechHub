@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16.4.0/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16.4.0/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/create-react-class@15.6.3/create-react-class.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <title>React </title>
+    <style>
+        .boxes {
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid #444;
+            padding: 15px;
+        }
+
+        .boxes button {
+            border: none;
+            outline: none;
+            padding: 7px;
+            text-align: center;
+            background-color: brown;
+            color: white;
+            cursor: pointer;
+        }
+
+        .badge {
+            display:    block;
+            width: 50px;
+            height: 50px;
+            background-color: salmon;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        const Picture = props => {
+            return (
+                <div>
+                    <img src={props.src}/>
+                    {props.children}
+                </div>
+            );
+        };
+
+
+        class Button extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    imgId: null,
+                    label: null
+                };
+                this.buttonLabel = this.buttonLabel.bind(this);
+            }
+
+            buttonLabel(src){
+                src.includes('200x100') ?
+                this.setState({imgId: this.props.id, label: 'Small'}) :
+                this.setState({imgId: this.props.id, label: 'Large'});
+            }
+
+            componentDidMount() {
+                this.buttonLabel(this.props.pictureSrc);
+            }
+
+
+            render () {
+                return (
+                    <div>
+                        <button onClick={() => this.props.setActivePic(this.props.id)}>
+                            {this.state.label}
+                        </button>
+                    </div>
+                );
+            }
+
+        }
+
+
+        class extends React.Component {
+            constructor(props  ) {
+                super(props);
+                this.state = {
+                    pictures: [
+                        {id: 1, src: 'https://source.unsplash.com/collection/190727/300x200'},
+                        {id: 2, src: 'https://source.unsplash.com/collection/190727/200x100'},
+                        {id: 3, src: 'https://source.unsplash.com/collection/190727/400x300'},
+                    ],
+                    activePic: null,
+                };
+                this.setActivePic = this.setActivePic.bind(this);
+            }
+
+            setActivePic(id) {
+                this.setState({activePic: id});
+            }
+        
+
+            render() {
+                const url = 'https://source.unsplash.com/collection/190727/300x200';
+                return (
+                    <div>
+                        <div className="boxes">
+                            {this.state.pictures.map(picture => {
+                                return (
+                                    <Picture key={picture.id} src={picture.src}>
+                                        <Button
+                                            pictureSrc={picture.src}
+                                            setActivePic={this.setActivePic}
+                                            id={picture.id}
+                                        />
+                                    </Picture>
+                                );
+                            })}
+                        </div>
+                        <div>
+                            <p>Selected ID: <span className="badge">{this.state.activePic}</span></p>
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+
+        const root = document.getElementById('app');
+
+        
+        ReactDOM.render(<App/>, root);
+    </script>
+</body>
+
+</html>
