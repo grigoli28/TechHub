@@ -89,14 +89,14 @@
         }
 
 
-        class extends React.Component {
+        class App extends React.Component {
             constructor(props  ) {
                 super(props);
                 this.state = {
                     pictures: [
-                        {id: 1, src: 'https://source.unsplash.com/collection/190727/300x200'},
-                        {id: 2, src: 'https://source.unsplash.com/collection/190727/200x100'},
-                        {id: 3, src: 'https://source.unsplash.com/collection/190727/400x300'},
+                        {id: 1, src: 'https://source.unsplash.com/user/joelvalve/300x200'},
+                        {id: 2, src: 'https://source.unsplash.com/user/joelvalve/200x100'},
+                        {id: 3, src: 'https://source.unsplash.com/user/joelvalve/400x300'},
                     ],
                     activePic: null,
                 };
@@ -109,7 +109,6 @@
         
 
             render() {
-                const url = 'https://source.unsplash.com/collection/190727/300x200';
                 return (
                     <div>
                         <div className="boxes">
