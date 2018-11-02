@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Demo</title>
+</head>
+
+<body>
+
+    <script>
+        class Developer {
+            constructor(name, lastname) {
+                this.name = name;
+                this.lastname = lastname;
+            }
+
+            getFullName() {
+                return `${this.name} ${this.lastname}`;
+            }
+
+        }
+
+        class HTMLDeveloper extends Developer {
+            getSalary() {
+                return `HTML Devleoper`;
+            }
+        }
+
+
+        class ReactDeveloper extends Developer {
+            getJob() {
+                return 'React Developer';
+            }
+        }
+
+
+        const dev = new Developer("John", "Doe");
+        const htmlDev = new HTMLDeveloper("HTML", "Developer");
+        const rectDev = new ReactDeveloper("React", "Developer");
+        console.log(dev.getFullName());
+        console.log(htmlDev.getFullName());
+        console.log(rectDev.getFullName());
+    </script>
+</body>
+
+</html>
