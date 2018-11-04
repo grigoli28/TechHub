@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const persons = [
+            { name: "Otiko", age: 25, id: 2 },
+            { name: "Mamuka", age: 20, id: 5 },
+            { name: "Grigoli", age: 20, id: 10 },
+            { name: "Salome", age: 17, id: 12 },
+        ];
+
+        let personsHTML = persons.map(person => `<p>User - <b>${person.name}</b>, Id - ${person.id}`);
+
+        let personsFiltered = persons.filter(person => person.age < 20)
+            .map(person => `<p>User - <b>${person.name}</b>, Id - ${person.id}`);
+
+        let personsReduced = persons.reduce((total, current) => {
+            return total + `<p>User - <b>${current.name}</b>, Id - ${current.id}`;
+        }, '');
+
+
+        document.body.innerHTML = personsHTML.join(' ');
+
+        document.body.innerHTML += '<hr>';
+        document.body.innerHTML += personsFiltered.join(' ');
+
+        document.body.innerHTML += '<hr>';
+        document.body.innerHTML += personsReduced;
+
+
+        console.log(personsReduced);
+
+
+
+
+        Array.prototype.myReduce = function (func, initial) {
+            let accumulated = initial == undefined ? this[0] : initial;
+
+            this.forEach((el, ind) => {
+                if (initial)
+                    accumulated = func(accumulated, el);
+                else if (ind != 0)
+                    accumulated = func(accumulated, el);
+            });
+
+            return accumulated;
+        }
+
+
+        console.log(new Array(1, 2, 3).myReduce((total, curr) => total + curr));
+
+        console.log(new Array(1, 2, 3).myReduce((total, curr) => total + curr, 0));
+
+
+    </script>
+</body>
+
+</html>
