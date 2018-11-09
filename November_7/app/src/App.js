@@ -17,17 +17,30 @@ class App extends Component {
   componentDidMount() {
     fetch(`${url}${this.state.query}`)
       .then(data => data.json())
-      .then(data => {
-        this.setState({ data, isLoading: false });
-        console.log(this.state.data);
-      })
+      .then(data => this.setState({ data, isLoading: false }))
       .catch(err => console.log(err));
   }
+
+  componentDidUpdate() {
+    fetch(`${url}${this.state.query}`)
+      .then(data => data.json())
+      .then(data => this.setState({ data, isLoading: false }))
+      .catch(err => console.log(err));
+  }
+
+  onSubmit = e => {
+    e.preventDefault();
+    const query = e.target.children.search.value;
+    this.setState({ query, isLoading: true });
+  };
 
   render() {
     return (
       <div className="wrapper">
-        <Search />
+        <Search
+          onSearchHandler={this.onSearchHandler}
+          onSubmit={this.onSubmit}
+        />
         {this.state.isLoading && <Loader />}
         {!this.state.isLoading && (
           <ResultList data={this.state.data.hits} limit={0} />
