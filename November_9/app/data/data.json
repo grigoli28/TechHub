@@ -1,6 +1,6 @@
 [
-  { "name": "Demo Title", "id": 0 },
-  { "name": "Lorem Ipsum", "id": 1 },
-  { "name": "Dolor Sit Amet", "id": 2 },
-  { "name": "Javascript (ES6)", "id": 3 }
+  { "done": true, "name": "Demo Title", "id": 0 },
+  { "done": false, "name": "Lorem Ipsum", "id": 1 },
+  { "done": true, "name": "Dolor Sit Amet", "id": 2 },
+  { "done": false, "name": "Javascript (ES6)", "id": 3 }
 ]

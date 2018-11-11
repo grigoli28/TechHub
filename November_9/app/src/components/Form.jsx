@@ -2,9 +2,10 @@ import React from "react";
 
 function Form({ onSubmit }) {
   let input = null;
+
   const handleSubmit = e => {
     e.preventDefault();
-    onSubmit(title, input, value);
+    onSubmit({ title: input.value });
     input.value = "";
   };
 
