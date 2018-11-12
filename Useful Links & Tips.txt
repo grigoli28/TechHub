@@ -134,6 +134,11 @@ https://flow.org/
 
 https://www.styled-components.com/
 
+https://hn.algolia.com/api
+
+https://github.com/adam-golab/react-developer-roadmap
+
+
 =========== Tips ===========
 
 Iso formatit time wera umjobesia
