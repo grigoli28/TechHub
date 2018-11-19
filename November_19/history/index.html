@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>History API</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .flex--container {
+        display: flex;
+        width: 960px;
+        margin: 0 auto;
+        border: 1px solid black;
+        padding: 30px;
+      }
+
+      .menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+      }
+
+      .menu > a {
+        text-decoration: none;
+        border: 1px dotted #999;
+      }
+
+      .column {
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex--container column">
+      <nav class="flex--item menu">
+        <a href="home.html" class="menu--item">Home</a>
+        <a href="contact.html" class="menu--item">Contact</a>
+        <a href="portfolio.html" class="menu--item">Portfolio</a>
+        <a href="about.html" class="menu--item">About Us</a>
+      </nav>
+
+      <h1 id="title"></h1>
+      <section id="content"></section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
