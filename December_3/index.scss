@@ -1,0 +1,85 @@
+@import "normalize";
+
+$font-family: "Courier New", Courier, monospace;
+$font-size: 2em;
+$titleParent: info;
+$grid: 12;
+$column: 50px;
+$gutter: 20px;
+$container: ($grid * $column) + ($gutter * $grid);
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: $container;
+  margin: 0 auto;
+}
+
+.title {
+  color: #ff7729;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: {
+    left: 10px solid black;
+    right: 5px solid red;
+    bottom: 3px dotted seagreen;
+    top: 6px dashed cornflowerblue;
+  }
+
+  @media screen and (min-width: 960px) {
+    background-color: #ddd;
+  }
+
+  span {
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: #ff7729;
+    font: $font-family $font-size;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  .#{$titleParent} > & {
+    font-family: $font-family;
+    height: (4000px / 10);
+  }
+}
+
+%message {
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.message--error {
+  @extend %message;
+  background-color: red;
+  color: #eee;
+}
+
+.message--info {
+  @extend %message;
+  background-color: seagreen;
+  color: #eee;
+}
+
+@mixin customBtn($color, $hoverColor) {
+  color: $color;
+  border: none;
+  outline: none;
+  &:hover {
+    color: $hoverColor;
+  }
+}
+
+.btn {
+  @include customBtn(aquamarine, seagreen);
+}
